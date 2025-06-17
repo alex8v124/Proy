@@ -20,6 +20,7 @@ export interface TeamMember {
   imageHint?: string;
   expertise: string[];
   bio?: string;
+  linkedinUrl?: string;
 }
 
 export const contactFormSchema = z.object({

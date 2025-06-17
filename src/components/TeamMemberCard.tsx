@@ -11,7 +11,7 @@ interface TeamMemberCardProps {
 
 export default function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
-    <Card className="group text-center bg-card border-border/30 hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-40)] dark:hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-40)] hover:border-accent/70 transform hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden">
+    <Card className="group text-center bg-card border-border/30 hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-40)] dark:hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-40)] hover:border-accent/70 transform hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden h-full flex flex-col">
       <CardHeader className="p-0 pt-6">
         <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-accent group-hover:border-primary transition-colors duration-300">
           <Image
@@ -24,7 +24,7 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
           />
         </div>
       </CardHeader>
-      <CardContent className="p-6">
+      <CardContent className="p-6 flex flex-col flex-grow">
         <CardTitle className="text-xl font-headline mb-1 group-hover:text-primary transition-colors">{member.name}</CardTitle>
         <CardDescription className="text-primary/90 dark:text-primary mb-3 flex items-center justify-center gap-1">
           <Briefcase size={16} /> {member.role}
@@ -32,7 +32,7 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
         
         {member.bio && <p className="text-sm text-muted-foreground mb-4">{member.bio}</p>}
 
-        <div className="mb-4">
+        <div className="mb-4 mt-auto">
           <h4 className="text-sm font-semibold mb-2 text-primary/80 dark:text-primary">Especialización:</h4>
           <div className="flex flex-wrap gap-2 justify-center">
             {member.expertise.map((skill) => (
@@ -41,13 +41,17 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
           </div>
         </div>
         
-        <a 
-          href="#" 
-          aria-label={`Perfil de LinkedIn de ${member.name}`}
-          className="inline-flex items-center justify-center text-accent hover:text-primary transition-colors"
-        >
-          <Linkedin size={20} />
-        </a>
+        {member.linkedinUrl && (
+          <a 
+            href={member.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Perfil de LinkedIn de ${member.name}`}
+            className="inline-flex items-center justify-center text-accent hover:text-primary transition-colors mt-auto"
+          >
+            <Linkedin size={20} />
+          </a>
+        )}
       </CardContent>
     </Card>
   );

@@ -15,75 +15,53 @@ import React from "react";
 const teamMembers: TeamMember[] = [
   {
     id: "1",
-    name: "Dra. Elara Vance",
-    role: "Directora Ejecutiva (CEO)",
-    imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "ceo mujer",
-    expertise: ["Visión Estratégica", "Liderazgo", "Gestión de Innovación", "Análisis de Mercado"],
-    bio: "Impulsando la visión de la empresa con más de 15 años de experiencia en liderazgo tecnológico.",
+    name: "Roy Meza",
+    role: "Ingeniero Backend",
+    imageUrl: "https://media.licdn.com/dms/image/D4E35AQG5kC2HeZlP9g/profile-framedphoto-shrink_800_800/0/1748852519439?e=1750802400&v=beta&t=sXpIHFgfIdCL_Eo550M-0Oim_9pEBcF74fqI1uoG6TU",
+    imageHint: "foto perfil",
+    expertise: ["Desarrollo Backend", "Node.js", "Bases de Datos", "APIs"],
+    bio: "Desarrollador Backend con experiencia en la creación de sistemas robustos y escalables.",
+    linkedinUrl: "https://www.linkedin.com/in/roymeza/",
   },
   {
     id: "2",
-    name: "Marcus Cole",
-    role: "Director de Tecnología (CTO)",
-    imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "cto hombre",
-    expertise: ["Desarrollo Full-Stack", "Arquitectura de Sistemas", "Integración IA", "Soluciones Cloud"],
-    bio: "Un visionario tecnológico dedicado a construir soluciones escalables y de vanguardia.",
+    name: "Omer Runco",
+    role: "Desarrollador Frontend",
+    imageUrl: "https://media.licdn.com/dms/image/D4E03AQH1NtOr1Jlmcg/profile-displayphoto-shrink_800_800/0/1748906912510?e=1755734400&v=beta&t=2YqnKOpm7tkJQgdCbAeTnFnJJpjMwg1OWKj94xFq-Q4",
+    imageHint: "foto perfil",
+    expertise: ["Desarrollo Frontend", "React", "Next.js", "UI/UX"],
+    bio: "Especialista en Frontend enfocado en crear interfaces de usuario interactivas y eficientes.",
+    linkedinUrl: "https://www.linkedin.com/in/omer-runco-b7a261310/",
   },
   {
     id: "3",
-    name: "Sofía Chen",
-    role: "Diseñadora UX/UI Principal",
-    imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "diseñadora mujer",
-    expertise: ["Diseño Centrado en el Usuario", "Prototipado", "Diseño de Interacción", "Accesibilidad"],
-    bio: "Apasionada por crear experiencias de usuario intuitivas y atractivas que deleitan.",
+    name: "Juan Miranda",
+    role: "Desarrollador de Software",
+    imageUrl: "https://media.licdn.com/dms/image/D5603AQGn2Oxslr6Deg/profile-displayphoto-shrink_800_800/0/1747434320679?e=1755734400&v=beta&t=gewGmcxuXK_HJKnL2RjNLKIdslqZUeJSOH8sf19EvR0",
+    imageHint: "foto perfil",
+    expertise: ["Desarrollo Web", "Aplicaciones Móviles", "Gestión de Proyectos"],
+    bio: "Desarrollador versátil con pasión por la tecnología y la resolución de problemas complejos.",
+    linkedinUrl: "https://www.linkedin.com/in/juan-alexander-miranda-quispe-0673812a3/",
   },
   {
     id: "4",
-    name: "Javier Rodríguez",
-    role: "Ingeniero de Software Senior",
-    imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "ingeniero hombre",
-    expertise: ["Backend Development", "API Design", "Microservicios", "DevOps"],
-    bio: "Experto en construir la espina dorsal de aplicaciones complejas y robustas.",
+    name: "Rubén Cuadros",
+    role: "Ingeniero Backend",
+    imageUrl: "https://media.licdn.com/dms/image/D5603AQEYBIayW8SNPA/profile-displayphoto-shrink_400_400/0/1743989435538?e=1755734400&v=beta&t=5HqGCqZWhlDmsfgmg_Xkb8_mnCYLm41Z9STAYvwuDpU",
+    imageHint: "foto perfil",
+    expertise: ["Arquitectura de Software", "Microservicios", "Cloud Computing", "Seguridad"],
+    bio: "Arquitecto de software y desarrollador backend, enfocado en soluciones innovadoras y seguras.",
+    linkedinUrl: "https://www.linkedin.com/in/ruben-cuadros/",
   },
   {
     id: "5",
-    name: "Laura Gómez",
+    name: "Jessica Parra",
     role: "Desarrolladora Frontend",
-    imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "desarrolladora mujer",
-    expertise: ["React", "Vue.js", "CSS Avanzado", "Performance Web"],
-    bio: "Transformando diseños en interfaces interactivas y visualmente atractivas.",
-  },
-  {
-    id: "6",
-    name: "Carlos Silva",
-    role: "Especialista en Bases de Datos",
-    imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "especialista base datos",
-    expertise: ["SQL", "NoSQL", "Optimización de Consultas", "Seguridad de Datos"],
-    bio: "Garantizando la integridad y eficiencia de los datos que impulsan las aplicaciones.",
-  },
-  {
-    id: "7",
-    name: "Ana Torres",
-    role: "Gerente de Proyectos",
-    imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "gerente proyectos mujer",
-    expertise: ["Metodologías Ágiles", "Scrum", "Gestión de Equipos", "Planificación Estratégica"],
-    bio: "Liderando proyectos desde la concepción hasta la entrega exitosa, asegurando la calidad.",
-  },
-  {
-    id: "8",
-    name: "David Luna",
-    role: "Ingeniero QA",
-    imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "ingeniero qa",
-    expertise: ["Pruebas Automatizadas", "Pruebas de Rendimiento", "Integración Continua", "Testing Manual"],
-    bio: "Comprometido con la calidad y la fiabilidad del software a través de pruebas exhaustivas.",
+    imageUrl: "https://media.licdn.com/dms/image/D4D03AQH0stfVqoqxDg/profile-displayphoto-shrink_800_800/0/1727061262584?e=1755734400&v=beta&t=6IpdqT4M0vZiSUjZlNAGHMwcARoGEPanLRcRdRXbaeQ",
+    imageHint: "foto perfil",
+    expertise: ["Diseño Web Responsivo", "JavaScript", "Tailwind CSS", "Accesibilidad"],
+    bio: "Desarrolladora Frontend comprometida con la creación de experiencias web visualmente atractivas y accesibles.",
+    linkedinUrl: "https://www.linkedin.com/in/jessica-parra24/",
   },
 ];
 
@@ -93,7 +71,7 @@ export default function TeamSection() {
   );
 
   return (
-    <section id="team" className="py-16 md:py-24 bg-background">
+    <section id="team" className="py-16 md:py-24 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Conoce a Nuestro Equipo</h2>
@@ -104,7 +82,7 @@ export default function TeamSection() {
         <Carousel
           opts={{
             align: "start",
-            loop: true,
+            loop: teamMembers.length > 2, // Loop si hay suficientes items para que tenga sentido
           }}
           plugins={[autoplayPlugin.current]}
           onMouseEnter={autoplayPlugin.current.stop}

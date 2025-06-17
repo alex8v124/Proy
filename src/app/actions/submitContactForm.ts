@@ -1,8 +1,8 @@
 "use server";
 
 import type { z } from "zod";
-import type { ContactFormSchema } from "@/types"; // Import the type
-import { contactFormSchema } from "@/types"; // Import the schema
+import type { ContactFormSchema } from "@/types"; 
+import { contactFormSchema } from "@/types"; 
 
 export type ContactFormState = {
   message: string;
@@ -19,20 +19,25 @@ export async function submitContactForm(
   const parsed = contactFormSchema.safeParse(formData);
 
   if (!parsed.success) {
+    const fieldErrors = parsed.error.issues.map((issue) => {
+      if (issue.path.includes("name")) return `Nombre: ${issue.message.toLowerCase()}`;
+      if (issue.path.includes("email")) return `Correo electrónico: ${issue.message.toLowerCase()}`;
+      if (issue.path.includes("message")) return `Mensaje: ${issue.message.toLowerCase()}`;
+      return issue.message;
+    });
     return {
-      message: "Invalid form data.",
+      message: "Datos del formulario no válidos.",
       fields: formData as Record<string, string>,
-      issues: parsed.error.issues.map((issue) => issue.message),
+      issues: fieldErrors,
       success: false,
     };
   }
 
-  // Simulate sending an email or saving to a database
-  console.log("Contact form submitted:", parsed.data);
-  await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
+  console.log("Formulario de contacto enviado:", parsed.data);
+  await new Promise(resolve => setTimeout(resolve, 1000)); 
 
   return {
-    message: "Thank you for your message! We'll get back to you soon.",
+    message: "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.",
     success: true,
   };
 }

@@ -41,7 +41,7 @@ export default function AboutUsSection() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Sobre Nosotros</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Conoce nuestra dedicación al desarrollo de software, aplicaciones web y de escritorio.
+            Conoce nuestra dedicación al desarrollo de software y aplicaciones web y de escritorio de vanguardia, enfocadas en potenciar a empresas como la tuya.
           </p>
         </div>
 

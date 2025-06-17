@@ -6,14 +6,14 @@ export default function AppHeader() {
     <header className="py-4 px-4 sm:px-6 lg:px-8 shadow-md bg-card">
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <CodeXml className="h-8 w-8 text-primary group-hover:text-accent transition-colors" />
-          <h1 className="text-2xl font-bold font-headline text-primary group-hover:text-accent transition-colors">
+          <CodeXml className="h-9 w-9 text-primary group-hover:text-accent transition-colors duration-300" />
+          <h1 className="text-2xl font-bold font-headline text-primary group-hover:text-accent transition-colors duration-300">
             All-in Dev Solutions
           </h1>
         </Link>
         <nav className="hidden md:flex gap-4">
           <a href="#portfolio" className="text-foreground hover:text-primary transition-colors">Portafolio</a>
-          <a href="#about" className="text-foreground hover:text-primary transition-colors">Sobre Nosotros</a>
+          <a href="#about" className="text-foreground hover:text-primary transition-colors">Nosotros</a>
           <a href="#team" className="text-foreground hover:text-primary transition-colors">Equipo</a>
           <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contacto</a>
         </nav>

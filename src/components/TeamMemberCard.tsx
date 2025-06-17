@@ -18,7 +18,7 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
             alt={member.name}
             layout="fill"
             objectFit="cover"
-            data-ai-hint={member.imageHint || "professional portrait"}
+            data-ai-hint={member.imageHint || "retrato profesional"}
           />
         </div>
       </CardHeader>
@@ -31,7 +31,7 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
         {member.bio && <p className="text-sm text-muted-foreground mb-4">{member.bio}</p>}
 
         <div className="mb-4">
-          <h4 className="text-sm font-semibold mb-2 text-primary">Expertise:</h4>
+          <h4 className="text-sm font-semibold mb-2 text-primary">Especialización:</h4>
           <div className="flex flex-wrap gap-2 justify-center">
             {member.expertise.map((skill) => (
               <Badge key={skill} variant="secondary" className="text-xs">{skill}</Badge>
@@ -41,7 +41,7 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
         
         <a 
           href="#" 
-          aria-label={`LinkedIn profile of ${member.name}`}
+          aria-label={`Perfil de LinkedIn de ${member.name}`}
           className="inline-flex items-center justify-center text-accent hover:text-primary transition-colors"
         >
           <Linkedin size={20} />

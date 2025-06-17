@@ -4,30 +4,30 @@ import TeamMemberCard from "@/components/TeamMemberCard";
 const teamMembers: TeamMember[] = [
   {
     id: "1",
-    name: "Dr. Elara Vance",
-    role: "Chief Executive Officer",
+    name: "Dra. Elara Vance",
+    role: "Directora Ejecutiva (CEO)",
     imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "ceo woman",
-    expertise: ["Strategic Vision", "Leadership", "Innovation Management", "Market Analysis"],
-    bio: "Driving the company's vision forward with over 15 years of experience in tech leadership.",
+    imageHint: "ceo mujer",
+    expertise: ["Visión Estratégica", "Liderazgo", "Gestión de Innovación", "Análisis de Mercado"],
+    bio: "Impulsando la visión de la empresa con más de 15 años de experiencia en liderazgo tecnológico.",
   },
   {
     id: "2",
     name: "Marcus Cole",
-    role: "Chief Technology Officer",
+    role: "Director de Tecnología (CTO)",
     imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "cto man",
-    expertise: ["Full-Stack Development", "System Architecture", "AI Integration", "Cloud Solutions"],
-    bio: "A tech visionary dedicated to building scalable and cutting-edge solutions.",
+    imageHint: "cto hombre",
+    expertise: ["Desarrollo Full-Stack", "Arquitectura de Sistemas", "Integración IA", "Soluciones Cloud"],
+    bio: "Un visionario tecnológico dedicado a construir soluciones escalables y de vanguardia.",
   },
   {
     id: "3",
-    name: "Sofia Chen",
-    role: "Lead UX/UI Designer",
+    name: "Sofía Chen",
+    role: "Diseñadora UX/UI Principal",
     imageUrl: "https://placehold.co/200x200.png",
-    imageHint: "designer woman",
-    expertise: ["User-Centered Design", "Prototyping", "Interaction Design", "Accessibility"],
-    bio: "Passionate about creating intuitive and engaging user experiences that delight.",
+    imageHint: "diseñadora mujer",
+    expertise: ["Diseño Centrado en el Usuario", "Prototipado", "Diseño de Interacción", "Accesibilidad"],
+    bio: "Apasionada por crear experiencias de usuario intuitivas y atractivas que deleitan.",
   },
 ];
 
@@ -36,9 +36,9 @@ export default function TeamSection() {
     <section id="team" className="py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Meet Our Team</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Conoce a Nuestro Equipo</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            The driving force behind our success. A group of passionate, talented individuals dedicated to excellence.
+            La fuerza impulsora detrás de nuestro éxito. Un grupo de individuos apasionados y talentosos dedicados a la excelencia.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

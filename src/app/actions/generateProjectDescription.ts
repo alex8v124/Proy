@@ -1,7 +1,5 @@
 "use server";
 
-// import { generateDescriptionFlow } from '@/ai/flows/projectDescription'; // Assuming this exists
-
 interface GenerateDescriptionParams {
   projectName: string;
   technologies: string[];
@@ -12,18 +10,14 @@ interface GenerateDescriptionParams {
 export async function generateProjectDescriptionAction(
   params: GenerateDescriptionParams
 ): Promise<string> {
-  // This is a mock implementation.
-  // In a real scenario, you would call your Genkit flow here.
-  // e.g., const description = await generateDescriptionFlow.run(params);
+  await new Promise(resolve => setTimeout(resolve, 1500)); 
 
-  await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network delay
-
-  let description = `Project "${params.projectName}" showcases our ability to leverage ${params.technologies.join(", ")}. `;
-  description += `We addressed the core challenge of "${params.problemSolved}"`;
+  let description = `El proyecto "${params.projectName}" demuestra nuestra capacidad para aprovechar ${params.technologies.join(", ")}. `;
+  description += `Abordamos el desafío central de "${params.problemSolved}"`;
   if (params.client) {
-    description += ` for our valued client, ${params.client}`;
+    description += ` para nuestro valioso cliente, ${params.client}`;
   }
-  description += ", delivering a robust and effective solution. This project highlights our commitment to technical excellence and client success.";
+  description += ", entregando una solución robusta y eficaz. Este proyecto destaca nuestro compromiso con la excelencia técnica y el éxito del cliente.";
   
   return description;
 }

@@ -15,7 +15,7 @@ interface PortfolioCardProps {
 }
 
 export default function PortfolioCard({ project }: PortfolioCardProps) {
-  const [description, setDescription] = useState(project.initialDescription || "Click 'Generate Description' to see AI-powered insights!");
+  const [description, setDescription] = useState(project.initialDescription || "¡Haz clic en 'Generar Descripción' para ver ideas potenciadas por IA!");
   const [isGenerating, startTransition] = useTransition();
   const { toast } = useToast();
 
@@ -30,22 +30,22 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
         });
         setDescription(newDescription);
         toast({
-          title: "Description Generated!",
-          description: `New description for ${project.name} is ready.`,
+          title: "¡Descripción Generada!",
+          description: `La nueva descripción para ${project.name} está lista.`,
         });
       } catch (error) {
-        console.error("Failed to generate description:", error);
+        console.error("Error al generar descripción:", error);
         toast({
           variant: "destructive",
-          title: "Error Generating Description",
-          description: "Could not generate a new description. Please try again.",
+          title: "Error al Generar Descripción",
+          description: "No se pudo generar una nueva descripción. Por favor, inténtalo de nuevo.",
         });
       }
     });
   };
 
   return (
-    <Card className="group flex flex-col h-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+    <Card className="group flex flex-col h-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden border border-transparent hover:border-accent/30">
       <CardHeader className="p-0">
         <div className="aspect-video relative w-full overflow-hidden">
           <Image
@@ -53,16 +53,16 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
             alt={project.name}
             layout="fill"
             objectFit="cover"
-            data-ai-hint={project.imageHint || "website application"}
+            data-ai-hint={project.imageHint || "aplicacion web"}
             className="transition-transform duration-500 group-hover:scale-105"
           />
         </div>
       </CardHeader>
       <CardContent className="p-6 flex-grow">
         <CardTitle className="text-2xl mb-2 font-headline">{project.name}</CardTitle>
-        {project.client && <p className="text-sm text-muted-foreground mb-2">Client: {project.client}</p>}
+        {project.client && <p className="text-sm text-muted-foreground mb-2">Cliente: {project.client}</p>}
         <div className="mb-3">
-          <h4 className="text-sm font-semibold mb-1 text-primary">Technologies Used:</h4>
+          <h4 className="text-sm font-semibold mb-1 text-primary">Tecnologías Utilizadas:</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
               <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
@@ -70,7 +70,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           </div>
         </div>
         <div className="mb-4">
-          <h4 className="text-sm font-semibold mb-1 text-primary">Problem Solved:</h4>
+          <h4 className="text-sm font-semibold mb-1 text-primary">Problema Resuelto:</h4>
           <p className="text-sm text-muted-foreground">{project.problemSolved}</p>
         </div>
         <CardDescription className="text-sm leading-relaxed min-h-[60px]">
@@ -84,12 +84,12 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           ) : (
             <Zap className="mr-2 h-4 w-4" />
           )}
-          Generate Description
+          Generar Descripción
         </Button>
         {project.projectUrl && (
           <Button asChild variant="default" size="sm" className="w-full sm:w-auto bg-accent hover:bg-accent/90">
             <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
-              View Project <ExternalLink className="ml-2 h-4 w-4" />
+              Ver Proyecto <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
         )}

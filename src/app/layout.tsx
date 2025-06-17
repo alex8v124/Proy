@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'All-in Dev Solutions S.R.L. - Desarrollo de Software',
-  description: 'Soluciones tecnológicas innovadoras en desarrollo de software, aplicaciones web y de escritorio. Transformamos tus ideas en realidad digital.',
+  title: 'All-in Dev Solutions S.R.L. - Desarrollo de Software Innovador',
+  description: 'Soluciones tecnológicas y desarrollo de software a medida para impulsar empresas medianas. Aplicaciones web, de escritorio y consultoría experta.',
 };
 
 export default function RootLayout({

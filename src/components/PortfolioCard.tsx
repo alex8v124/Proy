@@ -29,10 +29,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           client: project.client,
         });
         setDescription(newDescription);
-        toast({
-          title: "¡Descripción Generada!",
-          description: `La nueva descripción para ${project.name} está lista.`,
-        });
+        // Removed toast for successful generation to reduce clutter, errors are still shown.
       } catch (error) {
         console.error("Error al generar descripción:", error);
         toast({
@@ -45,7 +42,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
   };
 
   return (
-    <Card className="group flex flex-col h-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden border border-transparent hover:border-accent/30">
+    <Card className="group flex flex-col h-full hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--primary-rgb),0.25)] hover:border-accent/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out overflow-hidden">
       <CardHeader className="p-0">
         <div className="aspect-video relative w-full overflow-hidden">
           <Image
@@ -59,18 +56,18 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
         </div>
       </CardHeader>
       <CardContent className="p-6 flex-grow">
-        <CardTitle className="text-2xl mb-2 font-headline">{project.name}</CardTitle>
+        <CardTitle className="text-2xl mb-2 font-headline group-hover:text-primary transition-colors">{project.name}</CardTitle>
         {project.client && <p className="text-sm text-muted-foreground mb-2">Cliente: {project.client}</p>}
         <div className="mb-3">
-          <h4 className="text-sm font-semibold mb-1 text-primary">Tecnologías Utilizadas:</h4>
+          <h4 className="text-sm font-semibold mb-1 text-primary/80 dark:text-primary">Tecnologías Utilizadas:</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
-              <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
+              <Badge key={tech} variant="secondary" className="text-xs bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary/90">{tech}</Badge>
             ))}
           </div>
         </div>
         <div className="mb-4">
-          <h4 className="text-sm font-semibold mb-1 text-primary">Problema Resuelto:</h4>
+          <h4 className="text-sm font-semibold mb-1 text-primary/80 dark:text-primary">Problema Resuelto:</h4>
           <p className="text-sm text-muted-foreground">{project.problemSolved}</p>
         </div>
         <CardDescription className="text-sm leading-relaxed min-h-[60px]">
@@ -82,12 +79,12 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           {isGenerating ? (
             <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
           ) : (
-            <Zap className="mr-2 h-4 w-4" />
+            <Zap className="mr-2 h-4 w-4 text-accent" />
           )}
           Generar Descripción
         </Button>
         {project.projectUrl && (
-          <Button asChild variant="default" size="sm" className="w-full sm:w-auto bg-accent hover:bg-accent/90">
+          <Button asChild variant="default" size="sm" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
             <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
               Ver Proyecto <ExternalLink className="ml-2 h-4 w-4" />
             </a>

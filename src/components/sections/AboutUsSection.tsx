@@ -5,38 +5,38 @@ const valores = [
   { 
     titulo: "Innovación continua", 
     descripcion: "Apostamos por ideas frescas, tecnologías emergentes y mejoras constantes en cada proyecto.", 
-    icon: <Lightbulb className="h-10 w-10 text-accent" /> 
+    icon: <Lightbulb className="h-8 w-8 text-accent" /> 
   },
   { 
     titulo: "Compromiso", 
     descripcion: "Asumimos con responsabilidad cada reto, cumpliendo plazos y superando expectativas.", 
-    icon: <Handshake className="h-10 w-10 text-accent" /> 
+    icon: <Handshake className="h-8 w-8 text-accent" /> 
   },
   { 
     titulo: "Calidad", 
     descripcion: "Entregamos soluciones robustas, seguras y eficientes, priorizando la experiencia del usuario.", 
-    icon: <Award className="h-10 w-10 text-accent" /> 
+    icon: <Award className="h-8 w-8 text-accent" /> 
   },
   { 
     titulo: "Trabajo en equipo", 
     descripcion: "Creemos en la colaboración y el respeto como pilares para lograr grandes resultados.", 
-    icon: <Users className="h-10 w-10 text-accent" /> 
+    icon: <Users className="h-8 w-8 text-accent" /> 
   },
   { 
     titulo: "Adaptabilidad", 
     descripcion: "Nos ajustamos con agilidad a los cambios del mercado y las necesidades de nuestros clientes.", 
-    icon: <Shuffle className="h-10 w-10 text-accent" /> 
+    icon: <Shuffle className="h-8 w-8 text-accent" /> 
   },
   { 
     titulo: "Ética profesional", 
     descripcion: "Actuamos con integridad, transparencia y responsabilidad en cada interacción.", 
-    icon: <ShieldCheck className="h-10 w-10 text-accent" /> 
+    icon: <ShieldCheck className="h-8 w-8 text-accent" /> 
   },
 ];
 
 export default function AboutUsSection() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-card/50">
+    <section id="about" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Sobre Nosotros</h2>
@@ -46,10 +46,10 @@ export default function AboutUsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-12 md:mb-16">
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <Card className="shadow-xl hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--primary-rgb),0.25)] hover:border-primary/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out">
             <CardHeader>
               <CardTitle className="flex items-center text-2xl text-primary font-headline">
-                <Target className="mr-3 h-7 w-7" />
+                <Target className="mr-3 h-7 w-7 text-accent" />
                 Nuestra Misión
               </CardTitle>
             </CardHeader>
@@ -59,10 +59,10 @@ export default function AboutUsSection() {
               </p>
             </CardContent>
           </Card>
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <Card className="shadow-xl hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--primary-rgb),0.25)] hover:border-primary/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out">
             <CardHeader>
               <CardTitle className="flex items-center text-2xl text-primary font-headline">
-                <Eye className="mr-3 h-7 w-7" />
+                <Eye className="mr-3 h-7 w-7 text-accent" />
                 Nuestra Visión
               </CardTitle>
             </CardHeader>
@@ -76,13 +76,13 @@ export default function AboutUsSection() {
 
         <div className="text-center mb-10 md:mb-12">
           <h3 className="text-2xl sm:text-3xl font-bold font-headline text-primary flex items-center justify-center">
-            <Sparkles className="mr-3 h-8 w-8" />
+            <Sparkles className="mr-3 h-8 w-8 text-accent" />
             Nuestros Valores
           </h3>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {valores.map((valor) => (
-            <Card key={valor.titulo} className="shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 text-center flex flex-col items-center">
+            <Card key={valor.titulo} className="shadow-xl hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.25)] hover:border-accent/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out p-6 text-center flex flex-col items-center">
               <div className="mb-4 p-3 bg-accent/10 rounded-full">
                 {valor.icon}
               </div>

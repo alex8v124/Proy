@@ -33,9 +33,9 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-16 md:py-24 bg-secondary">
+    <section id="team" className="py-16 md:py-24 bg-background"> {/* Changed from bg-secondary */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Conoce a Nuestro Equipo</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             La fuerza impulsora detrás de nuestro éxito. Un grupo de individuos apasionados y talentosos dedicados a la excelencia.

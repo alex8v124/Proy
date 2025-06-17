@@ -10,31 +10,32 @@ interface TeamMemberCardProps {
 
 export default function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
-    <Card className="text-center hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+    <Card className="group text-center hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--primary-rgb),0.25)] hover:border-accent/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out overflow-hidden">
       <CardHeader className="p-0 pt-6">
-        <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-accent">
+        <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-accent group-hover:border-primary transition-colors duration-300">
           <Image
             src={member.imageUrl}
             alt={member.name}
             layout="fill"
             objectFit="cover"
             data-ai-hint={member.imageHint || "retrato profesional"}
+            className="transition-transform duration-500 group-hover:scale-110"
           />
         </div>
       </CardHeader>
       <CardContent className="p-6">
-        <CardTitle className="text-xl font-headline mb-1">{member.name}</CardTitle>
-        <CardDescription className="text-primary mb-3 flex items-center justify-center gap-1">
+        <CardTitle className="text-xl font-headline mb-1 group-hover:text-primary transition-colors">{member.name}</CardTitle>
+        <CardDescription className="text-primary/90 dark:text-primary mb-3 flex items-center justify-center gap-1">
           <Briefcase size={16} /> {member.role}
         </CardDescription>
         
         {member.bio && <p className="text-sm text-muted-foreground mb-4">{member.bio}</p>}
 
         <div className="mb-4">
-          <h4 className="text-sm font-semibold mb-2 text-primary">Especialización:</h4>
+          <h4 className="text-sm font-semibold mb-2 text-primary/80 dark:text-primary">Especialización:</h4>
           <div className="flex flex-wrap gap-2 justify-center">
             {member.expertise.map((skill) => (
-              <Badge key={skill} variant="secondary" className="text-xs">{skill}</Badge>
+              <Badge key={skill} variant="secondary" className="text-xs bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary/90">{skill}</Badge>
             ))}
           </div>
         </div>

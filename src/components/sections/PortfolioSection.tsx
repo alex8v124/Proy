@@ -38,9 +38,9 @@ const projects: PortfolioProject[] = [
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="py-16 md:py-24 bg-background">
+    <section id="portfolio" className="py-16 md:py-24 bg-card/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Nuestro Portafolio</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Descubre algunos de los proyectos innovadores que hemos entregado, demostrando nuestra experticia y compromiso con la calidad y las soluciones a medida para empresas.

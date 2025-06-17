@@ -10,7 +10,7 @@ interface TeamMemberCardProps {
 
 export default function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
-    <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden border border-border">
+    <Card className="text-center hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
       <CardHeader className="p-0 pt-6">
         <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-accent">
           <Image

@@ -45,7 +45,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
   };
 
   return (
-    <Card className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden rounded-lg border border-border">
+    <Card className="group flex flex-col h-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
       <CardHeader className="p-0">
         <div className="aspect-video relative w-full overflow-hidden">
           <Image

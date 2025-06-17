@@ -30,11 +30,11 @@
 
     /* Dark Theme (Default when .light class is not present on html) */
     /* HSL values for the body gradient */
-    --dark-gradient-start-hsl: 220 30% 8%;
-    --dark-gradient-end-hsl: 220 28% 12%;
+    --dark-gradient-start-hsl: 230 35% 12%; /* Dark Indigo */
+    --dark-gradient-end-hsl: 260 30% 9%;   /* Dark Violet */
 
     /* Core HSL variables for dark theme components (solid colors) */
-    --background: 220 28% 10%; /* Base for components like Dialog, Popover */
+    --background: 220 28% 10%; /* Base for components like Dialog, Popover - Kept as a solid dark base */
     --foreground: 210 40% 95%; /* #ECF2F8 Light cool gray */
 
     --card: 220 28% 12%; /* #161C24 Slightly lighter charcoal for cards */

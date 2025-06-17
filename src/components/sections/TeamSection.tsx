@@ -12,12 +12,26 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
 
+// Import local images - PLEASE VERIFY THE FILENAMES AND EXTENSIONS
+import royMezaImg from '@/components/img/roy-meza.jpg';
+import omerRuncoImg from '@/components/img/omer-runco.jpg';
+import juanMirandaImg from '@/components/img/juan-miranda.jpg';
+import rubenCuadrosImg from '@/components/img/ruben-cuadros.jpg';
+// !! CHECK THIS LINE CAREFULLY AND MATCH IT TO YOUR ACTUAL FILE !!
+import jessicaParraImg from '@/components/img/jessica-parra.png'; // Module not found error points here. Verify this filename and extension.
+// Assuming you will add images for Paimon, Jahmil, Roberto, Antoni
+// For now, using placeholders for them or they won't appear if not in the array
+import placeholderUser1 from '@/components/img/placeholder-user1.png';
+import placeholderUser2 from '@/components/img/placeholder-user2.png';
+import placeholderUser3 from '@/components/img/placeholder-user3.png';
+
+
 const teamMembers: TeamMember[] = [
   {
     id: "1",
     name: "Roy Meza",
     role: "Ingeniero Backend",
-    imageUrl: "https://media.licdn.com/dms/image/D4E35AQG5kC2HeZlP9g/profile-framedphoto-shrink_800_800/0/1748852519439?e=1750802400&v=beta&t=sXpIHFgfIdCL_Eo550M-0Oim_9pEBcF74fqI1uoG6TU",
+    imageUrl: royMezaImg,
     imageHint: "foto perfil",
     expertise: ["Desarrollo Backend", "Node.js", "Bases de Datos", "APIs"],
     bio: "Desarrollador Backend con experiencia en la creación de sistemas robustos y escalables.",
@@ -27,7 +41,7 @@ const teamMembers: TeamMember[] = [
     id: "2",
     name: "Omer Runco",
     role: "Desarrollador Frontend",
-    imageUrl: "https://media.licdn.com/dms/image/D4E03AQH1NtOr1Jlmcg/profile-displayphoto-shrink_800_800/0/1748906912510?e=1755734400&v=beta&t=2YqnKOpm7tkJQgdCbAeTnFnJJpjMwg1OWKj94xFq-Q4",
+    imageUrl: omerRuncoImg,
     imageHint: "foto perfil",
     expertise: ["Desarrollo Frontend", "React", "Next.js", "UI/UX"],
     bio: "Especialista en Frontend enfocado en crear interfaces de usuario interactivas y eficientes.",
@@ -37,7 +51,7 @@ const teamMembers: TeamMember[] = [
     id: "3",
     name: "Juan Miranda",
     role: "Desarrollador de Software",
-    imageUrl: "https://media.licdn.com/dms/image/D5603AQGn2Oxslr6Deg/profile-displayphoto-shrink_800_800/0/1747434320679?e=1755734400&v=beta&t=gewGmcxuXK_HJKnL2RjNLKIdslqZUeJSOH8sf19EvR0",
+    imageUrl: juanMirandaImg,
     imageHint: "foto perfil",
     expertise: ["Desarrollo Web", "Aplicaciones Móviles", "Gestión de Proyectos"],
     bio: "Desarrollador versátil con pasión por la tecnología y la resolución de problemas complejos.",
@@ -47,7 +61,7 @@ const teamMembers: TeamMember[] = [
     id: "4",
     name: "Rubén Cuadros",
     role: "Ingeniero Backend",
-    imageUrl: "https://media.licdn.com/dms/image/D5603AQEYBIayW8SNPA/profile-displayphoto-shrink_400_400/0/1743989435538?e=1755734400&v=beta&t=5HqGCqZWhlDmsfgmg_Xkb8_mnCYLm41Z9STAYvwuDpU",
+    imageUrl: rubenCuadrosImg,
     imageHint: "foto perfil",
     expertise: ["Arquitectura de Software", "Microservicios", "Cloud Computing", "Seguridad"],
     bio: "Arquitecto de software y desarrollador backend, enfocado en soluciones innovadoras y seguras.",
@@ -57,12 +71,43 @@ const teamMembers: TeamMember[] = [
     id: "5",
     name: "Jessica Parra",
     role: "Desarrolladora Frontend",
-    imageUrl: "https://media.licdn.com/dms/image/D4D03AQH0stfVqoqxDg/profile-displayphoto-shrink_800_800/0/1727061262584?e=1755734400&v=beta&t=6IpdqT4M0vZiSUjZlNAGHMwcARoGEPanLRcRdRXbaeQ",
+    imageUrl: jessicaParraImg,
     imageHint: "foto perfil",
     expertise: ["Diseño Web Responsivo", "JavaScript", "Tailwind CSS", "Accesibilidad"],
     bio: "Desarrolladora Frontend comprometida con la creación de experiencias web visualmente atractivas y accesibles.",
     linkedinUrl: "https://www.linkedin.com/in/jessica-parra24/",
   },
+  {
+    id: "6",
+    name: "Jahmil", 
+    role: "Desarrollador Frontend",
+    imageUrl: placeholderUser1, 
+    imageHint: "foto perfil",
+    expertise: ["Frontend", "React", "Vue"],
+    bio: "Desarrollador Frontend apasionado por las nuevas tecnologías.",
+    // linkedinUrl: "https://linkedin.com/in/jahmil", // Add actual URL
+  },
+  {
+    id: "7",
+    name: "Paimon", 
+    role: "Ingeniero Backend",
+    imageUrl: placeholderUser2, 
+    imageHint: "foto perfil",
+    expertise: ["Backend", "Python", "Django"],
+    bio: "Ingeniero Backend con foco en la eficiencia y escalabilidad de sistemas.",
+    // linkedinUrl: "https://linkedin.com/in/paimon", // Add actual URL
+  },
+  {
+    id: "8",
+    name: "Roberto", 
+    role: "Arquitecto de Software",
+    imageUrl: placeholderUser3, 
+    imageHint: "foto perfil",
+    expertise: ["Arquitectura de Software", "Liderazgo Técnico", "Diagramas"],
+    bio: "Arquitecto de Software encargado de la estructura y visión técnica de los proyectos.",
+    // linkedinUrl: "https://linkedin.com/in/roberto-arquitecto", // Add actual URL
+  },
+  // Antoni Cano for Cotización y Negociación, you might want to add them too if they are part of the core team display
 ];
 
 export default function TeamSection() {
@@ -82,7 +127,7 @@ export default function TeamSection() {
         <Carousel
           opts={{
             align: "start",
-            loop: teamMembers.length > 2, // Loop si hay suficientes items para que tenga sentido
+            loop: teamMembers.length > 2, 
           }}
           plugins={[autoplayPlugin.current]}
           onMouseEnter={autoplayPlugin.current.stop}

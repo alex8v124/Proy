@@ -1,4 +1,5 @@
 
+import type { StaticImageData } from "next/image";
 import { z } from "zod";
 
 export interface PortfolioProject {
@@ -16,7 +17,7 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
-  imageUrl: string;
+  imageUrl: string | StaticImageData; // Updated to allow StaticImageData
   imageHint?: string;
   expertise: string[];
   bio?: string;

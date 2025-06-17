@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Light Theme (Fallback/Alternative) - Professional & Clean */
+    /* Light Theme Variables (suffixed with -light) */
     --background-light: 221 83% 98%; /* #F0F9FF Very light blue */
     --foreground-light: 222 47% 11%; /* Dark Blue/Black for text */
     --card-light: 0 0% 100%; /* White cards */
@@ -28,8 +28,13 @@
     --primary_raw_light: 226 70% 32%;
 
 
-    /* Dark Theme (Default) - Techy, Modern, Sophisticated */
-    --background: linear-gradient(135deg, hsl(220, 30%, 8%), hsl(220, 28%, 12%)); /* Diffused background */
+    /* Dark Theme (Default when .light class is not present on html) */
+    /* HSL values for the body gradient */
+    --dark-gradient-start-hsl: 220 30% 8%;
+    --dark-gradient-end-hsl: 220 28% 12%;
+
+    /* Core HSL variables for dark theme components (solid colors) */
+    --background: 220 28% 10%; /* Base for components like Dialog, Popover */
     --foreground: 210 40% 95%; /* #ECF2F8 Light cool gray */
 
     --card: 220 28% 12%; /* #161C24 Slightly lighter charcoal for cards */
@@ -81,8 +86,8 @@
     --shadow-accent-glow-40: hsla(var(--accent_raw), 0.4);
   }
 
-  .light { /* Explicit light theme class */
-    --background: var(--background-light); /* Solid color for light theme */
+  .light { /* Overrides for light theme */
+    --background: var(--background-light);
     --foreground: var(--foreground-light);
     --card: var(--card-light);
     --card-foreground: var(--card-foreground-light);
@@ -103,8 +108,6 @@
     --border: var(--border-light);
     --input: var(--input-light);
     --ring: var(--ring-light);
-
-    /* Shadow variables are automatically updated as --primary_raw and --accent_raw are overridden above */
   }
 }
 
@@ -113,8 +116,15 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    /* Default body background (for dark theme) */
+    background: linear-gradient(135deg, hsl(var(--dark-gradient-start-hsl)), hsl(var(--dark-gradient-end-hsl)));
+    @apply text-foreground font-body antialiased;
   }
+  /* When .light class is on html, override body background */
+  .light body {
+     background: hsl(var(--background-light)); /* Use the solid light background color */
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
   }

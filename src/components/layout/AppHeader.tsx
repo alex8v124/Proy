@@ -12,9 +12,10 @@ export default function AppHeader() {
           </h1>
         </Link>
         <nav className="hidden md:flex gap-4">
-          <a href="#portfolio" className="text-foreground hover:text-primary transition-colors">Portfolio</a>
-          <a href="#team" className="text-foreground hover:text-primary transition-colors">Team</a>
-          <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+          <a href="#portfolio" className="text-foreground hover:text-primary transition-colors">Portafolio</a>
+          <a href="#about" className="text-foreground hover:text-primary transition-colors">Sobre Nosotros</a>
+          <a href="#team" className="text-foreground hover:text-primary transition-colors">Equipo</a>
+          <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contacto</a>
         </nav>
       </div>
     </header>

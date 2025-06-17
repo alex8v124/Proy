@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'All-in Dev Showcase',
-  description: 'Portfolio of All-in Dev Solutions S.R.L.',
+  title: 'All-in Dev Solutions S.R.L. - Desarrollo de Software',
+  description: 'Soluciones tecnológicas innovadoras en desarrollo de software, aplicaciones web y de escritorio. Transformamos tus ideas en realidad digital.',
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="es">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

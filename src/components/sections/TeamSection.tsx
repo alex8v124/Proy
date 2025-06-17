@@ -19,7 +19,7 @@ import juanMirandaImg from '@/components/img/juan-miranda.jpg';
 import rubenCuadrosImg from '@/components/img/ruben-cuadros.jpg';
 // !! CHECK THIS LINE CAREFULLY AND MATCH IT TO YOUR ACTUAL FILE !!
 import jessicaParraImg from '@/components/img/jessica-parra.png'; // Module not found error points here. Verify this filename and extension.
-// Assuming you will add images for Paimon, Jahmil, Roberto, Antoni
+// Assuming you will add images for Jahmil, Roberto
 // For now, using placeholders for them or they won't appear if not in the array
 import placeholderUser1 from '@/components/img/placeholder-user1.png';
 import placeholderUser2 from '@/components/img/placeholder-user2.png';
@@ -79,9 +79,9 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: "6",
-    name: "Jahmil", 
+    name: "Jahmil",
     role: "Desarrollador Frontend",
-    imageUrl: placeholderUser1, 
+    imageUrl: placeholderUser1,
     imageHint: "foto perfil",
     expertise: ["Frontend", "React", "Vue"],
     bio: "Desarrollador Frontend apasionado por las nuevas tecnologías.",
@@ -89,25 +89,24 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: "7",
-    name: "Paimon", 
-    role: "Ingeniero Backend",
-    imageUrl: placeholderUser2, 
+    name: "Antoni Cano",
+    role: "Cotización y Negociación",
+    imageUrl: placeholderUser2,
     imageHint: "foto perfil",
-    expertise: ["Backend", "Python", "Django"],
-    bio: "Ingeniero Backend con foco en la eficiencia y escalabilidad de sistemas.",
-    // linkedinUrl: "https://linkedin.com/in/paimon", // Add actual URL
+    expertise: ["Cotizaciones", "Negociación de Proyectos", "Relación con Clientes"],
+    bio: "Encargado de la cotización de proyectos y la negociación con clientes para asegurar el éxito mutuo.",
+    // linkedinUrl: "https://linkedin.com/in/antoni-cano", // Add actual URL
   },
   {
     id: "8",
-    name: "Roberto", 
+    name: "Roberto",
     role: "Arquitecto de Software",
-    imageUrl: placeholderUser3, 
+    imageUrl: placeholderUser3,
     imageHint: "foto perfil",
-    expertise: ["Arquitectura de Software", "Liderazgo Técnico", "Diagramas"],
+    expertise: ["Arquitectura de Software", "Liderazgo Técnico", "Diagramas de Sistema"],
     bio: "Arquitecto de Software encargado de la estructura y visión técnica de los proyectos.",
     // linkedinUrl: "https://linkedin.com/in/roberto-arquitecto", // Add actual URL
   },
-  // Antoni Cano for Cotización y Negociación, you might want to add them too if they are part of the core team display
 ];
 
 export default function TeamSection() {
@@ -127,7 +126,7 @@ export default function TeamSection() {
         <Carousel
           opts={{
             align: "start",
-            loop: teamMembers.length > 2, 
+            loop: teamMembers.length > 2,
           }}
           plugins={[autoplayPlugin.current]}
           onMouseEnter={autoplayPlugin.current.stop}

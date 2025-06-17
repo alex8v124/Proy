@@ -29,7 +29,7 @@
 
 
     /* Dark Theme (Default) - Techy, Modern, Sophisticated */
-    --background: 220 30% 8%; /* #0F141A Deep cool charcoal */
+    --background: linear-gradient(135deg, hsl(220, 30%, 8%), hsl(220, 28%, 12%)); /* Diffused background */
     --foreground: 210 40% 95%; /* #ECF2F8 Light cool gray */
 
     --card: 220 28% 12%; /* #161C24 Slightly lighter charcoal for cards */
@@ -82,7 +82,7 @@
   }
 
   .light { /* Explicit light theme class */
-    --background: var(--background-light);
+    --background: var(--background-light); /* Solid color for light theme */
     --foreground: var(--foreground-light);
     --card: var(--card-light);
     --card-foreground: var(--card-foreground-light);

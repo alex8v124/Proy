@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import ContactFormContent from "@/components/sections/ContactFormContent";
 import { Separator } from "@/components/ui/separator";
-import { Mail, MessageCircle, Linkedin } from "lucide-react"; // MessageCircle para WhatsApp
+import { Phone, MessageCircle, Linkedin } from "lucide-react"; // Changed Mail to Phone
 
 export default function FloatingContactButton() {
   const [open, setOpen] = useState(false);
@@ -24,10 +24,10 @@ export default function FloatingContactButton() {
         <Button
           variant="default"
           size="lg"
-          className="fixed bottom-6 right-6 rounded-full shadow-lg p-0 z-50 h-16 w-16 flex items-center justify-center bg-accent hover:bg-accent/90 text-accent-foreground transform hover:scale-110 transition-all duration-300 ease-in-out"
+          className="fixed bottom-6 right-6 rounded-full shadow-lg z-50 flex items-center justify-center bg-accent hover:bg-accent/90 text-accent-foreground transform hover:scale-110 transition-all duration-300 ease-in-out px-6 py-3"
           aria-label="Contáctanos"
         >
-          <Mail className="h-7 w-7" />
+          <Phone className="mr-2 h-5 w-5" /> Contáctanos
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[550px] bg-card border-border/30 p-0">
@@ -45,7 +45,7 @@ export default function FloatingContactButton() {
             <div className="flex flex-col sm:flex-row justify-center gap-3">
               <Button variant="outline" asChild className="w-full sm:w-auto hover:bg-green-500/10 hover:text-green-600 hover:border-green-500/50">
                 <a 
-                  href="https://wa.me/NUMERO_DE_WHATSAPP" // Reemplazar con el número real, ej: https://wa.me/51987654321
+                  href="https://wa.me/NUMERO_DE_WHATSAPP" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="Contactar por WhatsApp"
@@ -55,7 +55,7 @@ export default function FloatingContactButton() {
               </Button>
               <Button variant="outline" asChild className="w-full sm:w-auto hover:bg-sky-600/10 hover:text-sky-700 hover:border-sky-600/50">
                 <a 
-                  href="https://linkedin.com/company/TU_EMPRESA" // Reemplazar con el enlace real
+                  href="https://linkedin.com/company/TU_EMPRESA"
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="Visitar perfil de LinkedIn"
@@ -63,7 +63,6 @@ export default function FloatingContactButton() {
                   <Linkedin className="mr-2 h-5 w-5" /> LinkedIn
                 </a>
               </Button>
-              {/* Puedes añadir más botones para otras redes aquí */}
             </div>
           </div>
         </div>

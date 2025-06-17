@@ -1,5 +1,13 @@
+
 import type { TeamMember } from "@/types";
 import TeamMemberCard from "@/components/TeamMemberCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 const teamMembers: TeamMember[] = [
   {
@@ -29,11 +37,56 @@ const teamMembers: TeamMember[] = [
     expertise: ["Diseño Centrado en el Usuario", "Prototipado", "Diseño de Interacción", "Accesibilidad"],
     bio: "Apasionada por crear experiencias de usuario intuitivas y atractivas que deleitan.",
   },
+  {
+    id: "4",
+    name: "Javier Rodríguez",
+    role: "Ingeniero de Software Senior",
+    imageUrl: "https://placehold.co/200x200.png",
+    imageHint: "ingeniero hombre",
+    expertise: ["Backend Development", "API Design", "Microservicios", "DevOps"],
+    bio: "Experto en construir la espina dorsal de aplicaciones complejas y robustas.",
+  },
+  {
+    id: "5",
+    name: "Laura Gómez",
+    role: "Desarrolladora Frontend",
+    imageUrl: "https://placehold.co/200x200.png",
+    imageHint: "desarrolladora mujer",
+    expertise: ["React", "Vue.js", "CSS Avanzado", "Performance Web"],
+    bio: "Transformando diseños en interfaces interactivas y visualmente atractivas.",
+  },
+  {
+    id: "6",
+    name: "Carlos Silva",
+    role: "Especialista en Bases de Datos",
+    imageUrl: "https://placehold.co/200x200.png",
+    imageHint: "especialista base datos",
+    expertise: ["SQL", "NoSQL", "Optimización de Consultas", "Seguridad de Datos"],
+    bio: "Garantizando la integridad y eficiencia de los datos que impulsan las aplicaciones.",
+  },
+  {
+    id: "7",
+    name: "Ana Torres",
+    role: "Gerente de Proyectos",
+    imageUrl: "https://placehold.co/200x200.png",
+    imageHint: "gerente proyectos mujer",
+    expertise: ["Metodologías Ágiles", "Scrum", "Gestión de Equipos", "Planificación Estratégica"],
+    bio: "Liderando proyectos desde la concepción hasta la entrega exitosa, asegurando la calidad.",
+  },
+  {
+    id: "8",
+    name: "David Luna",
+    role: "Ingeniero QA",
+    imageUrl: "https://placehold.co/200x200.png",
+    imageHint: "ingeniero qa",
+    expertise: ["Pruebas Automatizadas", "Pruebas de Rendimiento", "Integración Continua", "Testing Manual"],
+    bio: "Comprometido con la calidad y la fiabilidad del software a través de pruebas exhaustivas.",
+  },
 ];
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-16 md:py-24 bg-background"> {/* Changed from bg-secondary */}
+    <section id="team" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Conoce a Nuestro Equipo</h2>
@@ -41,11 +94,25 @@ export default function TeamSection() {
             La fuerza impulsora detrás de nuestro éxito. Un grupo de individuos apasionados y talentosos dedicados a la excelencia.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member) => (
-            <TeamMemberCard key={member.id} member={member} />
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {teamMembers.map((member) => (
+              <CarouselItem key={member.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                <div className="p-1 h-full">
+                  <TeamMemberCard member={member} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-[-20px] sm:left-[-40px] top-1/2 -translate-y-1/2 hidden sm:flex z-10" />
+          <CarouselNext className="absolute right-[-20px] sm:right-[-40px] top-1/2 -translate-y-1/2 hidden sm:flex z-10" />
+        </Carousel>
       </div>
     </section>
   );

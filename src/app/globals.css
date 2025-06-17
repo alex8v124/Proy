@@ -5,27 +5,27 @@
 @layer base {
   :root {
     /* Light Theme (Fallback/Alternative) - Professional & Clean */
-    --background-light: 210 60% 98%; /* Very Light Blue/Gray */
+    --background-light: 221 83% 98%; /* #F0F9FF Very light blue */
     --foreground-light: 222 47% 11%; /* Dark Blue/Black for text */
     --card-light: 0 0% 100%; /* White cards */
     --card-foreground-light: 222 47% 11%;
     --popover-light: 0 0% 100%;
     --popover-foreground-light: 222 47% 11%;
-    --primary-light: 223 64% 32%; /* #1E3A8A Deep blue */
+    --primary-light: 226 70% 32%; /* #1E3A8A Deep blue */
     --primary-foreground-light: 0 0% 100%; /* White text on deep blue */
-    --secondary-light: 210 60% 93%; /* Lighter, less saturated blue */
-    --secondary-foreground-light: 223 64% 25%; /* Darker blue for text on secondary */
-    --muted-light: 210 50% 90%; /* Even lighter blue/gray */
+    --secondary-light: 221 70% 90%; /* Lighter, less saturated blue */
+    --secondary-foreground-light: 226 70% 25%; /* Darker blue for text on secondary */
+    --muted-light: 221 60% 85%; /* Even lighter blue/gray */
     --muted-foreground-light: 220 25% 45%; /* Softer dark gray */
-    --accent-light: 262 83% 62%; /* #7C3AED Electric purple */
-    --accent_raw_light: 262 83% 62%; /* For use in hsla shadows */
+    --accent-light: 262 83% 60%; /* #7C3AED Electric purple */
+    --accent_raw_light: 262 83% 60%;
     --accent-foreground-light: 0 0% 100%; /* White text on purple */
     --destructive-light: 0 84.2% 60.2%;
     --destructive-foreground-light: 0 0% 98%;
-    --border-light: 210 40% 85%; /* Light blue/gray border */
-    --input-light: 210 40% 90%;
-    --ring-light: 223 64% 32%;
-    --primary_raw_light: 223 64% 32%;
+    --border-light: 221 50% 80%; /* Light blue/gray border */
+    --input-light: 221 50% 92%;
+    --ring-light: 226 70% 32%; /* Deep blue for rings */
+    --primary_raw_light: 226 70% 32%;
 
 
     /* Dark Theme (Default) - Techy, Modern, Sophisticated */
@@ -118,4 +118,15 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
   }
+}
+
+/* Animation for text gradient */
+@keyframes text-gradient {
+  to {
+    background-position: 200% center;
+  }
+}
+.animate-text-gradient {
+  background-size: 200% auto;
+  animation: text-gradient 3s linear infinite;
 }

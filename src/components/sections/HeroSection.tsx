@@ -4,16 +4,13 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative py-28 md:py-48 bg-background text-foreground overflow-hidden">
-      <div className="absolute inset-0 opacity-5 dark:opacity-[0.03]">
-        {/* Subtle background pattern */}
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="heroPattern" patternUnits="userSpaceOnUse" width="70" height="70" patternTransform="scale(1) rotate(0)"><rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,0)"/><path d="M10-20v40M0-10h20M10 0v20M0 10h20M10 20v20M0 30h20M10 40v20M0 50h20" strokeWidth="1" stroke="hsl(var(--primary) / 0.2)" fill="none"></path></pattern></defs><rect width="100%" height="100%" fill="url(#heroPattern)"/></svg>
-      </div>
+    <section className="relative py-28 md:py-48 text-foreground overflow-hidden bg-gradient-to-br from-background via-[hsl(var(--accent)/0.05)] to-[hsl(var(--primary)/0.1)]">
+      {/* Removed the old SVG pattern div */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="inline-block p-3 mb-6 bg-primary/10 rounded-full">
-          <CodeXml className="h-10 w-10 text-primary" />
+        <div className="inline-block p-3 mb-6 bg-accent/10 rounded-full shadow-lg">
+          <CodeXml className="h-10 w-10 sm:h-12 sm:w-12 text-accent" />
         </div>
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 font-headline text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 font-headline text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-text-gradient">
           Soluciones que se adaptan a ti, tecnología que transforma.
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-body text-muted-foreground">
@@ -21,14 +18,27 @@ export default function HeroSection() {
           impulsando la transformación digital de empresas medianas en crecimiento.
         </p>
         <div className="space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:gap-4">
-          <Button asChild size="lg" className="shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-0.5 bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button asChild size="lg" className="shadow-lg hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-1 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 text-base md:text-lg">
             <Link href="#portfolio">
               Ver Nuestro Trabajo <ArrowDown className="ml-2 h-5 w-5" />
             </Link>
           </Button>
-          {/* El botón de Contáctanos que estaba aquí ha sido eliminado */}
         </div>
       </div>
+      {/* Optional: Add more sophisticated background elements if needed, e.g., animated particles, geometric shapes, etc. */}
     </section>
   );
 }
+
+// It might be good to add this to globals.css if not already present and used by animate-text-gradient:
+/*
+@keyframes text-gradient {
+  to {
+    background-position: 200% center;
+  }
+}
+.animate-text-gradient {
+  background-size: 200% auto;
+  animation: text-gradient 3s linear infinite;
+}
+*/

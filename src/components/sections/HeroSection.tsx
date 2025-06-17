@@ -8,13 +8,14 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen flex items-center justify-center text-foreground overflow-hidden">
       <Image
-        src="https://placehold.co/1920x1080.png"
-        alt="Fondo Hero All-in Dev Solutions"
+        src="https://img.freepik.com/vector-gratis/ciudad-moderna-noche-horizonte-neon-dibujos-animados_1441-3160.jpg?semt=ais_hybrid&w=740"
+        alt="Fondo Hero All-in Dev Solutions ciudad neón"
         layout="fill"
         objectFit="cover"
         className="z-0"
-        data-ai-hint="ciudad noche tecnologia"
+        data-ai-hint="ciudad neon dibujos animados"
         priority
+        quality={90} // Added quality for potentially better image
       />
       <div className="absolute inset-0 bg-black/60 z-10" /> {/* Overlay */}
       

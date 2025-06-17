@@ -18,12 +18,15 @@
     --muted-light: 210 50% 90%; /* Even lighter blue/gray */
     --muted-foreground-light: 220 25% 45%; /* Softer dark gray */
     --accent-light: 262 83% 62%; /* #7C3AED Electric purple */
+    --accent_raw_light: 262 83% 62%; /* For use in hsla shadows */
     --accent-foreground-light: 0 0% 100%; /* White text on purple */
     --destructive-light: 0 84.2% 60.2%;
     --destructive-foreground-light: 0 0% 98%;
     --border-light: 210 40% 85%; /* Light blue/gray border */
     --input-light: 210 40% 90%;
     --ring-light: 223 64% 32%;
+    --primary_raw_light: 223 64% 32%;
+
 
     /* Dark Theme (Default) - Techy, Modern, Sophisticated */
     --background: 220 30% 8%; /* #0F141A Deep cool charcoal */
@@ -36,6 +39,7 @@
     --popover-foreground: 210 40% 95%;
 
     --primary: 190 90% 55%; /* #1AD9E0 Bright Cyan/Electric Blue */
+    --primary_raw: 190 90% 55%; /* For use in hsla shadows */
     --primary-foreground: 220 30% 5%; /* Dark text on bright primary */
 
     --secondary: 220 25% 20%; /* #293240 Muted dark blue/gray for secondary elements */
@@ -45,6 +49,7 @@
     --muted-foreground: 210 30% 65%; /* #8FA3B8 Softer gray for muted text */
 
     --accent: 290 80% 65%; /* #C54FF2 Vibrant Magenta/Purple */
+    --accent_raw: 290 80% 65%; /* For use in hsla shadows */
     --accent-foreground: 0 0% 100%; /* White text on accent */
 
     --destructive: 0 70% 55%; /* #ED4C4C Adjusted destructive for dark mode */
@@ -69,6 +74,11 @@
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 220 20% 25%;
     --sidebar-ring: 190 90% 55%;
+
+    /* New shadow color variables that adapt to theme */
+    --shadow-primary-glow: hsla(var(--primary_raw), 0.3);
+    --shadow-accent-glow-30: hsla(var(--accent_raw), 0.3);
+    --shadow-accent-glow-40: hsla(var(--accent_raw), 0.4);
   }
 
   .light { /* Explicit light theme class */
@@ -79,19 +89,22 @@
     --popover: var(--popover-light);
     --popover-foreground: var(--popover-foreground-light);
     --primary: var(--primary-light);
+    --primary_raw: var(--primary_raw_light);
     --primary-foreground: var(--primary-foreground-light);
     --secondary: var(--secondary-light);
     --secondary-foreground: var(--secondary-foreground-light);
     --muted: var(--muted-light);
     --muted-foreground: var(--muted-foreground-light);
     --accent: var(--accent-light);
+    --accent_raw: var(--accent_raw_light);
     --accent-foreground: var(--accent-foreground-light);
     --destructive: var(--destructive-light);
     --destructive-foreground: var(--destructive-foreground-light);
     --border: var(--border-light);
     --input: var(--input-light);
     --ring: var(--ring-light);
-    /* Chart colors for light theme can be different if needed */
+
+    /* Shadow variables are automatically updated as --primary_raw and --accent_raw are overridden above */
   }
 }
 

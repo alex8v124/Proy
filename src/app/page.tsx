@@ -3,7 +3,7 @@ import AppFooter from "@/components/layout/AppFooter";
 import HeroSection from "@/components/sections/HeroSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import TeamSection from "@/components/sections/TeamSection";
-import ContactSection from "@/components/sections/ContactSection";
+// import ContactSection from "@/components/sections/ContactSection"; // Eliminado
 import AboutUsSection from "@/components/sections/AboutUsSection";
 import { Separator } from "@/components/ui/separator";
 
@@ -18,8 +18,8 @@ export default function Home() {
         <AboutUsSection />
         <Separator className="my-8 md:my-12 container max-w-5xl mx-auto" />
         <TeamSection />
-        <Separator className="my-8 md:my-12 container max-w-5xl mx-auto" />
-        <ContactSection />
+        {/* <Separator className="my-8 md:my-12 container max-w-5xl mx-auto" /> */} {/* Separador eliminado */}
+        {/* <ContactSection /> */} {/* Sección eliminada */}
       </main>
       <AppFooter />
     </div>

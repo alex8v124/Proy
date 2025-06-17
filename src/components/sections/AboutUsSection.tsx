@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Eye, Sparkles, Lightbulb, Handshake, Award, Users, Shuffle, ShieldCheck } from "lucide-react";
 
@@ -46,7 +47,7 @@ export default function AboutUsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-12 md:mb-16">
-          <Card className="shadow-xl hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--primary-rgb),0.25)] hover:border-primary/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out">
+          <Card className="bg-card border-border/30 shadow-xl hover:shadow-[0_10px_30px_-5px_var(--shadow-primary-glow)] dark:hover:shadow-[0_10px_30px_-5px_var(--shadow-primary-glow)] hover:border-primary/50 transform hover:-translate-y-2 transition-all duration-300 ease-in-out">
             <CardHeader>
               <CardTitle className="flex items-center text-2xl text-primary font-headline">
                 <Target className="mr-3 h-7 w-7 text-accent" />
@@ -59,7 +60,7 @@ export default function AboutUsSection() {
               </p>
             </CardContent>
           </Card>
-          <Card className="shadow-xl hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--primary-rgb),0.25)] hover:border-primary/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out">
+          <Card className="bg-card border-border/30 shadow-xl hover:shadow-[0_10px_30px_-5px_var(--shadow-primary-glow)] dark:hover:shadow-[0_10px_30px_-5px_var(--shadow-primary-glow)] hover:border-primary/50 transform hover:-translate-y-2 transition-all duration-300 ease-in-out">
             <CardHeader>
               <CardTitle className="flex items-center text-2xl text-primary font-headline">
                 <Eye className="mr-3 h-7 w-7 text-accent" />
@@ -82,7 +83,7 @@ export default function AboutUsSection() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {valores.map((valor) => (
-            <Card key={valor.titulo} className="shadow-xl hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.25)] hover:border-accent/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out p-6 text-center flex flex-col items-center">
+            <Card key={valor.titulo} className="bg-card border-border/30 shadow-xl hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-30)] dark:hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-30)] hover:border-accent/50 transform hover:-translate-y-2 transition-all duration-300 ease-in-out p-6 text-center flex flex-col items-center">
               <div className="mb-4 p-3 bg-accent/10 rounded-full">
                 {valor.icon}
               </div>

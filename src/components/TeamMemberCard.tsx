@@ -1,3 +1,4 @@
+
 import type { TeamMember } from "@/types";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
@@ -10,7 +11,7 @@ interface TeamMemberCardProps {
 
 export default function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
-    <Card className="group text-center hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--primary-rgb),0.25)] hover:border-accent/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out overflow-hidden">
+    <Card className="group text-center bg-card border-border/30 hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-40)] dark:hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-40)] hover:border-accent/70 transform hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden">
       <CardHeader className="p-0 pt-6">
         <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-accent group-hover:border-primary transition-colors duration-300">
           <Image

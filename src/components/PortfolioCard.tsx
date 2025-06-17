@@ -1,3 +1,4 @@
+
 "use client";
 
 import type { PortfolioProject } from "@/types";
@@ -29,7 +30,6 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           client: project.client,
         });
         setDescription(newDescription);
-        // Removed toast for successful generation to reduce clutter, errors are still shown.
       } catch (error) {
         console.error("Error al generar descripción:", error);
         toast({
@@ -42,7 +42,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
   };
 
   return (
-    <Card className="group flex flex-col h-full hover:shadow-[0_8px_30px_rgb(0_0_0_/_12%)] dark:hover:shadow-[0_8px_30px_rgba(var(--primary-rgb),0.25)] hover:border-accent/50 transform hover:-translate-y-1 transition-all duration-300 ease-in-out overflow-hidden">
+    <Card className="group flex flex-col h-full bg-card border-border/30 hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-40)] dark:hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-40)] hover:border-accent/70 transform hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden">
       <CardHeader className="p-0">
         <div className="aspect-video relative w-full overflow-hidden">
           <Image
@@ -75,7 +75,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
         </CardDescription>
       </CardContent>
       <CardFooter className="p-6 pt-0 flex flex-col sm:flex-row justify-between items-center gap-2">
-        <Button onClick={handleGenerateDescription} disabled={isGenerating} variant="outline" size="sm" className="w-full sm:w-auto">
+        <Button onClick={handleGenerateDescription} disabled={isGenerating} variant="outline" size="sm" className="w-full sm:w-auto hover:bg-accent/10 hover:text-accent hover:border-accent">
           {isGenerating ? (
             <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
           ) : (

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import FloatingContactButton from '@/components/FloatingContactButton'; // Nueva importación
 
 export const metadata: Metadata = {
   title: 'All-in Dev Solutions S.R.L. - Desarrollo de Software Innovador',
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className="font-body antialiased">
         {children}
         <Toaster />
+        <FloatingContactButton /> {/* Botón flotante añadido aquí */}
       </body>
     </html>
   );

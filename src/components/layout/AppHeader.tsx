@@ -15,7 +15,7 @@ export default function AppHeader() {
           <a href="#portfolio" className="text-muted-foreground hover:text-primary transition-colors font-medium">Portafolio</a>
           <a href="#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">Nosotros</a>
           <a href="#team" className="text-muted-foreground hover:text-primary transition-colors font-medium">Equipo</a>
-          <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors font-medium">Contacto</a>
+          {/* <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors font-medium">Contacto</a> */} {/* Eliminado */}
         </nav>
       </div>
     </header>

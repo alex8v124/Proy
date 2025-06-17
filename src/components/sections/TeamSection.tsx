@@ -1,4 +1,5 @@
 
+"use client";
 import type { TeamMember } from "@/types";
 import TeamMemberCard from "@/components/TeamMemberCard";
 import {
@@ -8,6 +9,8 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
 const teamMembers: TeamMember[] = [
   {
@@ -85,6 +88,10 @@ const teamMembers: TeamMember[] = [
 ];
 
 export default function TeamSection() {
+  const autoplayPlugin = React.useRef(
+    Autoplay({ delay: 10000, stopOnInteraction: true, stopOnMouseEnter: true })
+  );
+
   return (
     <section id="team" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,6 +106,9 @@ export default function TeamSection() {
             align: "start",
             loop: true,
           }}
+          plugins={[autoplayPlugin.current]}
+          onMouseEnter={autoplayPlugin.current.stop}
+          onMouseLeave={autoplayPlugin.current.play}
           className="w-full max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto"
         >
           <CarouselContent className="-ml-2 md:-ml-4">

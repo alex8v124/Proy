@@ -4,6 +4,7 @@
 import type { PortfolioProject } from "@/types";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, RefreshCw, Zap } from "lucide-react";
@@ -83,13 +84,11 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           )}
           Generar Descripción
         </Button>
-        {project.projectUrl && (
-          <Button asChild variant="default" size="sm" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
-            <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
-              Ver Proyecto <ExternalLink className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
-        )}
+        <Button asChild variant="default" size="sm" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Link href={`/portafolio/${project.id}`}>
+            Ver Proyecto <ExternalLink className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
       </CardFooter>
     </Card>
   );

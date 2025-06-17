@@ -1,3 +1,4 @@
+
 import { z } from "zod";
 
 export interface PortfolioProject {
@@ -8,7 +9,6 @@ export interface PortfolioProject {
   client?: string;
   technologies: string[];
   problemSolved: string;
-  projectUrl?: string;
   initialDescription?: string;
 }
 

@@ -1,7 +1,8 @@
+
 import type { PortfolioProject } from "@/types";
 import PortfolioCard from "@/components/PortfolioCard";
 
-const projects: PortfolioProject[] = [
+export const projects: PortfolioProject[] = [
   {
     id: "1",
     name: "Plataforma E-commerce Avanzada",
@@ -10,7 +11,6 @@ const projects: PortfolioProject[] = [
     client: "Global Retail Inc.",
     technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind CSS"],
     problemSolved: "Necesitaban una solución de e-commerce escalable y moderna para aumentar las ventas en línea y optimizar la experiencia del usuario.",
-    projectUrl: "#",
     initialDescription: "Una plataforma de comercio electrónico de alto rendimiento diseñada para el crecimiento y la fluidez en la experiencia del cliente.",
   },
   {
@@ -22,7 +22,6 @@ const projects: PortfolioProject[] = [
     technologies: ["React", "Node.js", "GraphQL", "MongoDB", "Chart.js"],
     problemSolved: "Requerían un dashboard integral para visualizar datos complejos y proporcionar insights accionables para su producto SaaS.",
     initialDescription: "Un dashboard SaaS intuitivo y potente para la visualización y gestión de datos empresariales.",
-    projectUrl: "#",
   },
   {
     id: "3",

@@ -17,7 +17,8 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
-  imageUrl: string | StaticImageData; // Updated to allow StaticImageData
+  specialTitle?: string; // Nuevo campo
+  imageUrl: string | StaticImageData;
   imageHint?: string;
   expertise: string[];
   bio?: string;

@@ -26,10 +26,12 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
       </CardHeader>
       <CardContent className="p-6 flex flex-col flex-grow">
         <CardTitle className="text-xl font-headline mb-1 group-hover:text-primary transition-colors">{member.name}</CardTitle>
-        <CardDescription className="text-primary/90 dark:text-primary mb-3 flex items-center justify-center gap-1">
+        <CardDescription className="text-primary/90 dark:text-primary mb-1 flex items-center justify-center gap-1">
           <Briefcase size={16} /> {member.role}
         </CardDescription>
-        
+        {member.specialTitle && (
+          <p className="text-sm font-semibold text-accent mb-3">{member.specialTitle}</p>
+        )}
         {member.bio && <p className="text-sm text-muted-foreground mb-4">{member.bio}</p>}
 
         <div className="mb-4 mt-auto">

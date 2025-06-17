@@ -19,7 +19,7 @@ import juanMirandaImg from '@/components/img/juan-miranda.jpg';
 import rubenCuadrosImg from '@/components/img/ruben-cuadros.jpg';
 // !! CHECK THIS LINE CAREFULLY AND MATCH IT TO YOUR ACTUAL FILE !!
 import jessicaParraImg from '@/components/img/jessica-parra.png'; // Module not found error points here. Verify this filename and extension.
-// Assuming you will add images for Jahmil, Roberto
+// Assuming you will add images for Jahmil, Roberto, Antoni
 // For now, using placeholders for them or they won't appear if not in the array
 import placeholderUser1 from '@/components/img/placeholder-user1.png';
 import placeholderUser2 from '@/components/img/placeholder-user2.png';
@@ -41,6 +41,7 @@ const teamMembers: TeamMember[] = [
     id: "2",
     name: "Omer Runco",
     role: "Desarrollador Frontend",
+    specialTitle: "El jefazo ricazo",
     imageUrl: omerRuncoImg,
     imageHint: "foto perfil",
     expertise: ["Desarrollo Frontend", "React", "Next.js", "UI/UX"],
@@ -79,33 +80,33 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: "6",
-    name: "Jahmil",
+    name: "Jahmil", // Placeholder, update with actual data
     role: "Desarrollador Frontend",
-    imageUrl: placeholderUser1,
+    imageUrl: placeholderUser1, // Use placeholder image
     imageHint: "foto perfil",
-    expertise: ["Frontend", "React", "Vue"],
+    expertise: ["Frontend", "React", "Vue"], // Example expertise
     bio: "Desarrollador Frontend apasionado por las nuevas tecnologías.",
-    // linkedinUrl: "https://linkedin.com/in/jahmil", // Add actual URL
+    // linkedinUrl: "https://linkedin.com/in/jahmil", // Add actual LinkedIn URL
   },
   {
     id: "7",
     name: "Antoni Cano",
     role: "Cotización y Negociación",
-    imageUrl: placeholderUser2,
+    imageUrl: placeholderUser2, // Use placeholder image
     imageHint: "foto perfil",
     expertise: ["Cotizaciones", "Negociación de Proyectos", "Relación con Clientes"],
     bio: "Encargado de la cotización de proyectos y la negociación con clientes para asegurar el éxito mutuo.",
-    // linkedinUrl: "https://linkedin.com/in/antoni-cano", // Add actual URL
+    // linkedinUrl: "https://linkedin.com/in/antoni-cano", // Add actual LinkedIn URL
   },
   {
     id: "8",
-    name: "Roberto",
+    name: "Roberto", // Placeholder, update with actual data
     role: "Arquitecto de Software",
-    imageUrl: placeholderUser3,
+    imageUrl: placeholderUser3, // Use placeholder image
     imageHint: "foto perfil",
-    expertise: ["Arquitectura de Software", "Liderazgo Técnico", "Diagramas de Sistema"],
+    expertise: ["Arquitectura de Software", "Liderazgo Técnico", "Diagramas de Sistema"], // Example expertise
     bio: "Arquitecto de Software encargado de la estructura y visión técnica de los proyectos.",
-    // linkedinUrl: "https://linkedin.com/in/roberto-arquitecto", // Add actual URL
+    // linkedinUrl: "https://linkedin.com/in/roberto-arquitecto", // Add actual LinkedIn URL
   },
 ];
 
@@ -126,7 +127,7 @@ export default function TeamSection() {
         <Carousel
           opts={{
             align: "start",
-            loop: teamMembers.length > 2,
+            loop: teamMembers.length > 2, // Enable loop only if there are enough items for it to make sense
           }}
           plugins={[autoplayPlugin.current]}
           onMouseEnter={autoplayPlugin.current.stop}

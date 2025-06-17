@@ -1,0 +1,119 @@
+"use client";
+
+import { useFormState, useFormStatus } from "react-dom";
+import { submitContactForm, type ContactFormState } from "@/app/actions/submitContactForm";
+import { contactFormSchema } from "@/types"; // Updated import path
+import { useEffect } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Mail, Send, User, MessageSquare } from "lucide-react";
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" disabled={pending} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+      {pending ? (
+        <>
+          <Send className="mr-2 h-4 w-4 animate-pulse" /> Sending...
+        </>
+      ) : (
+        <>
+          <Send className="mr-2 h-4 w-4" /> Send Message
+        </>
+      )}
+    </Button>
+  );
+}
+
+export default function ContactSection() {
+  const initialState: ContactFormState = { message: "", success: false };
+  const [state, formAction] = useFormState(submitContactForm, initialState);
+  const { toast } = useToast();
+
+  useEffect(() => {
+    if (state.message) {
+      if (state.success) {
+        toast({
+          title: "Message Sent!",
+          description: state.message,
+        });
+        // Optionally reset form here or redirect
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Submission Error",
+          description: state.message + (state.issues ? ` Issues: ${state.issues.join(", ")}` : ""),
+        });
+      }
+    }
+  }, [state, toast]);
+
+  return (
+    <section id="contact" className="py-16 md:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <Card className="max-w-2xl mx-auto shadow-xl border border-border">
+          <CardHeader className="text-center">
+            <CardTitle className="text-3xl sm:text-4xl font-bold font-headline text-primary">Get In Touch</CardTitle>
+            <CardDescription className="mt-2 text-lg text-muted-foreground">
+              Have a project in mind or want to learn more? We'd love to hear from you.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form action={formAction} className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="name" className="flex items-center gap-2"><User size={16}/> Your Name</Label>
+                <Input 
+                  id="name" 
+                  name="name" 
+                  type="text" 
+                  placeholder="John Doe" 
+                  required 
+                  aria-describedby="name-error"
+                  className="bg-card"
+                />
+                {state.issues && state.fields?.name && !contactFormSchema.shape.name.safeParse(state.fields.name).success && (
+                   <p id="name-error" className="text-sm text-destructive">{state.issues.find(issue => issue.toLowerCase().includes('name'))}</p>
+                )}
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email" className="flex items-center gap-2"><Mail size={16}/> Your Email</Label>
+                <Input 
+                  id="email" 
+                  name="email" 
+                  type="email" 
+                  placeholder="john.doe@example.com" 
+                  required 
+                  aria-describedby="email-error"
+                  className="bg-card"
+                />
+                 {state.issues && state.fields?.email && !contactFormSchema.shape.email.safeParse(state.fields.email).success && (
+                   <p id="email-error" className="text-sm text-destructive">{state.issues.find(issue => issue.toLowerCase().includes('email'))}</p>
+                )}
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message" className="flex items-center gap-2"><MessageSquare size={16}/> Your Message</Label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your project or inquiry..."
+                  rows={5}
+                  required
+                  aria-describedby="message-error"
+                  className="bg-card"
+                />
+                {state.issues && state.fields?.message && !contactFormSchema.shape.message.safeParse(state.fields.message).success && (
+                   <p id="message-error" className="text-sm text-destructive">{state.issues.find(issue => issue.toLowerCase().includes('message'))}</p>
+                )}
+              </div>
+              <SubmitButton />
+            </form>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  );
+}

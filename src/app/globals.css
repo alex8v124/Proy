@@ -29,9 +29,10 @@
 
 
     /* Dark Theme (Default when .light class is not present on html) */
-    /* HSL values for the body gradient (Original - kept for reference, but body now uses a different gradient) */
-    --dark-gradient-start-hsl: 230 35% 12%; /* Dark Indigo */
-    --dark-gradient-end-hsl: 260 30% 9%;   /* Dark Violet */
+    /* HSL values for the body gradient */
+    --gradient-dark-black-hsl: 0 0% 0%;          /* Negro */
+    --gradient-dark-metallic-blue-hsl: 220 50% 25%; /* Azul Metálico */
+    --gradient-dark-deep-purple-hsl: 270 50% 20%; /* Morado Intenso */
 
     /* Core HSL variables for dark theme components (solid colors) */
     --background: 220 28% 10%; /* Base for components like Dialog, Popover - Kept as a solid dark base */
@@ -116,8 +117,8 @@
     @apply border-border;
   }
   body {
-    /* Default body background (for dark theme) - Updated to Black -> Dark Brown -> Gold */
-    background: linear-gradient(135deg, hsl(0, 0%, 0%) 0%, hsl(30, 40%, 10%) 50%, hsl(45, 70%, 45%) 100%);
+    /* Default body background (for dark theme) - Updated to Black -> Metallic Blue -> Deep Purple */
+    background: linear-gradient(135deg, hsl(var(--gradient-dark-black-hsl)) 0%, hsl(var(--gradient-dark-metallic-blue-hsl)) 50%, hsl(var(--gradient-dark-deep-purple-hsl)) 100%);
     @apply text-foreground font-body antialiased;
   }
   /* When .light class is on html, override body background */

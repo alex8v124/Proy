@@ -31,8 +31,8 @@
     /* Dark Theme (Default when .light class is not present on html) */
     /* HSL values for the body gradient */
     --gradient-dark-black-hsl: 0 0% 0%;          /* Negro */
-    --gradient-dark-metallic-blue-hsl: 220 50% 25%; /* Azul Metálico */
-    --gradient-dark-deep-purple-hsl: 270 50% 20%; /* Morado Intenso */
+    --gradient-dark-metallic-blue-hsl: 220 50% 15%; /* Azul Metálico (Más oscuro) */
+    --gradient-dark-deep-purple-hsl: 270 50% 10%; /* Morado Intenso (Más oscuro) */
 
     /* Core HSL variables for dark theme components (solid colors) */
     --background: 220 28% 10%; /* Base for components like Dialog, Popover - Kept as a solid dark base */
@@ -141,3 +141,4 @@
   background-size: 200% auto;
   animation: text-gradient 3s linear infinite;
 }
+

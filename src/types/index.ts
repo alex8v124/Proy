@@ -5,7 +5,7 @@ import { z } from "zod";
 export interface PortfolioProject {
   id: string;
   name: string;
-  imageUrl: string | StaticImageData;
+  imageUrl: string; // Simplificado a string para usar rutas de /public o URLs externas
   imageHint?: string;
   client?: string;
   technologies: string[];
@@ -18,7 +18,7 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
-  specialTitle?: string; // Nuevo campo
+  specialTitle?: string;
   imageUrl: string | StaticImageData;
   imageHint?: string;
   expertise: string[];

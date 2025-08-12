@@ -6,7 +6,7 @@ export const projects: PortfolioProject[] = [
   {
     id: "1",
     name: "Sitio Web Institucional - Winnetka",
-    imageUrl: "https://placehold.co/600x400.png", // Reverted to placeholder to fix build error
+    imageUrl: "/images/pag_winnetka.png", // Usando imagen desde la carpeta /public/images
     imageHint: "school website",
     client: "CEP Winnetka",
     technologies: ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS"],

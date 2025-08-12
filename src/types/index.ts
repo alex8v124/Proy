@@ -5,7 +5,7 @@ import { z } from "zod";
 export interface PortfolioProject {
   id: string;
   name: string;
-  imageUrl: string;
+  imageUrl: string | StaticImageData;
   imageHint?: string;
   client?: string;
   technologies: string[];

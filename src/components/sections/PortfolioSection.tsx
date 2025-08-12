@@ -5,13 +5,14 @@ import PortfolioCard from "@/components/PortfolioCard";
 export const projects: PortfolioProject[] = [
   {
     id: "1",
-    name: "Plataforma E-commerce Avanzada",
+    name: "Sitio Web Institucional - Winnetka",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "ecommerce website",
-    client: "Global Retail Inc.",
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind CSS"],
-    problemSolved: "Necesitaban una solución de e-commerce escalable y moderna para aumentar las ventas en línea y optimizar la experiencia del usuario.",
-    initialDescription: "Una plataforma de comercio electrónico de alto rendimiento diseñada para el crecimiento y la fluidez en la experiencia del cliente.",
+    imageHint: "school website",
+    client: "CEP Winnetka",
+    technologies: ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS"],
+    problemSolved: "El centro educativo necesitaba una presencia digital moderna para comunicar su propuesta de valor, historia y niveles educativos, además de facilitar un portal de preinscripción en línea para nuevos apoderados.",
+    initialDescription: "Se desarrolló un sitio web institucional completo y un portal administrativo. El sitio público presenta la misión, visión, historia y oferta educativa del colegio, mientras que el portal facilita la gestión de preinscripciones, apoderados y docentes, unificando la comunicación y los procesos en una plataforma digital.",
+    url: "https://sistema-web-winnetka.vercel.app/",
   },
   {
     id: "2",

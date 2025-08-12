@@ -4,10 +4,13 @@ import AppFooter from "@/components/layout/AppFooter";
 import { projects } from "@/components/sections/PortfolioSection";
 import type { PortfolioProject } from "@/types";
 import Image from "next/image";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { ExternalLink } from "lucide-react";
 
 async function getProject(id: string): Promise<PortfolioProject | undefined> {
   // In a real app, this would fetch from a database or API
@@ -84,6 +87,16 @@ export default async function ProjectDetailPage({ params }: { params: { projectI
                 <h2 className="text-xl font-semibold font-headline text-accent mb-2">Problema Resuelto</h2>
                 <p className="text-base text-muted-foreground leading-relaxed">{project.problemSolved}</p>
               </div>
+               {project.url && (
+                <div>
+                  <h2 className="text-xl font-semibold font-headline text-accent mb-2">Sitio en Vivo</h2>
+                  <Button asChild variant="outline" className="w-full hover:bg-accent/10 hover:text-accent hover:border-accent">
+                    <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                      Visitar Sitio Web <ExternalLink className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              )}
             </aside>
           </div>
           

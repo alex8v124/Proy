@@ -11,6 +11,7 @@ export interface PortfolioProject {
   technologies: string[];
   problemSolved: string;
   initialDescription?: string;
+  url?: string;
 }
 
 export interface TeamMember {

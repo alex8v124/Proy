@@ -1,6 +1,7 @@
 import { CodeXml } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import MobileMenu from './MobileMenu'; // Nueva importación
 
 export default function AppHeader() {
   return (
@@ -31,6 +32,9 @@ export default function AppHeader() {
           <Link href="/nosotros" className="font-medium text-gray-100 hover:text-primary transition-colors">Nosotros</Link>
           <Link href="/equipo" className="font-medium text-gray-100 hover:text-primary transition-colors">Equipo</Link>
         </nav>
+        <div className="md:hidden">
+          <MobileMenu />
+        </div>
       </div>
     </header>
   );

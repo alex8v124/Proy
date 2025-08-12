@@ -27,9 +27,9 @@ export default function AppHeader() {
           </h1>
         </Link>
         <nav className="hidden md:flex gap-6">
-          <a href="#portfolio" className="font-medium text-gray-100 hover:text-primary transition-colors">Portafolio</a>
-          <a href="#about" className="font-medium text-gray-100 hover:text-primary transition-colors">Nosotros</a>
-          <a href="#team" className="font-medium text-gray-100 hover:text-primary transition-colors">Equipo</a>
+          <Link href="/portafolio" className="font-medium text-gray-100 hover:text-primary transition-colors">Portafolio</Link>
+          <Link href="/nosotros" className="font-medium text-gray-100 hover:text-primary transition-colors">Nosotros</Link>
+          <Link href="/equipo" className="font-medium text-gray-100 hover:text-primary transition-colors">Equipo</Link>
         </nav>
       </div>
     </header>

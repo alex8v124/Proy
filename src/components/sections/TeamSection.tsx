@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
+import AnimatedTitle from "@/components/animations/AnimatedTitle";
 
 // Import local images - PLEASE VERIFY THE FILENAMES AND EXTENSIONS
 import royMezaImg from '@/components/img/roy-meza.jpg';
@@ -119,7 +120,7 @@ export default function TeamSection() {
     <section id="team" className="py-16 md:py-24 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Conoce a Nuestro Equipo</h2>
+          <AnimatedTitle className="text-3xl sm:text-4xl font-bold font-headline text-primary">Conoce a Nuestro Equipo</AnimatedTitle>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             La fuerza impulsora detrás de nuestro éxito. Un grupo de individuos apasionados y talentosos dedicados a la excelencia.
           </p>

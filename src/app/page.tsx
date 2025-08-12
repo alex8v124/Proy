@@ -1,11 +1,13 @@
+
 import AppHeader from "@/components/layout/AppHeader";
 import AppFooter from "@/components/layout/AppFooter";
 import HeroSection from "@/components/sections/HeroSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import TeamSection from "@/components/sections/TeamSection";
-// import ContactSection from "@/components/sections/ContactSection"; // Eliminado
 import AboutUsSection from "@/components/sections/AboutUsSection";
 import { Separator } from "@/components/ui/separator";
+import AnimatedSection from "@/components/animations/AnimatedSection";
+import AnimatedTitle from "@/components/animations/AnimatedTitle";
 
 export default function Home() {
   return (
@@ -13,13 +15,22 @@ export default function Home() {
       <AppHeader />
       <main className="flex-grow">
         <HeroSection />
-        <PortfolioSection />
+
+        <AnimatedSection>
+          <PortfolioSection />
+        </AnimatedSection>
+        
         <Separator className="my-8 md:my-12 container max-w-5xl mx-auto" />
-        <AboutUsSection />
+        
+        <AnimatedSection delay="200ms">
+          <AboutUsSection />
+        </AnimatedSection>
+        
         <Separator className="my-8 md:my-12 container max-w-5xl mx-auto" />
-        <TeamSection />
-        {/* <Separator className="my-8 md:my-12 container max-w-5xl mx-auto" /> */} {/* Separador eliminado */}
-        {/* <ContactSection /> */} {/* Sección eliminada */}
+        
+        <AnimatedSection delay="200ms">
+          <TeamSection />
+        </AnimatedSection>
       </main>
       <AppFooter />
     </div>

@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Eye, Sparkles, Lightbulb, Handshake, Award, Users, Shuffle, ShieldCheck } from "lucide-react";
+import AnimatedTitle from "@/components/animations/AnimatedTitle";
 
 const valores = [
   { 
@@ -40,7 +41,7 @@ export default function AboutUsSection() {
     <section id="about" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold font-headline text-primary">Sobre Nosotros</h2>
+          <AnimatedTitle className="text-3xl sm:text-4xl font-bold font-headline text-primary">Sobre Nosotros</AnimatedTitle>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
             Conoce nuestra dedicación al desarrollo de software y aplicaciones web y de escritorio de vanguardia, enfocadas en potenciar a empresas como la tuya.
           </p>

@@ -105,7 +105,7 @@ export default async function ProjectDetailPage({ params }: { params: { projectI
           <section>
             <h2 className="text-2xl sm:text-3xl font-semibold font-headline text-primary mb-4">Descripción Detallada del Proyecto</h2>
             <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed space-y-4">
-              <p className="whitespace-pre-line">{project.initialDescription || "No hay una descripción detallada disponible para este proyecto en este momento."}</p>
+              <p className="whitespace-pre-line">{project.detailedDescription || "No hay una descripción detallada disponible para este proyecto en este momento."}</p>
             </div>
           </section>
         </article>
@@ -114,10 +114,3 @@ export default async function ProjectDetailPage({ params }: { params: { projectI
     </div>
   );
 }
-
-// Optional: For better performance if you have a fixed number of projects and want to pre-render them
-// export async function generateStaticParams() {
-//   return projects.map((project) => ({
-//     projectId: project.id,
-//   }));
-// }

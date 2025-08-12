@@ -7,7 +7,7 @@ export default function TeamPage() {
     <div className="flex flex-col min-h-screen">
       <AppHeader />
       <main className="flex-grow">
-        <TeamSection />
+        <TeamSection displayMode="grid" />
       </main>
       <AppFooter />
     </div>

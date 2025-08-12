@@ -111,7 +111,11 @@ const teamMembers: TeamMember[] = [
   },
 ];
 
-export default function TeamSection() {
+interface TeamSectionProps {
+  displayMode?: 'carousel' | 'grid';
+}
+
+export default function TeamSection({ displayMode = 'carousel' }: TeamSectionProps) {
   const autoplayPlugin = React.useRef(
     Autoplay({ delay: 10000, stopOnInteraction: true, stopOnMouseEnter: true })
   );
@@ -125,28 +129,37 @@ export default function TeamSection() {
             La fuerza impulsora detrás de nuestro éxito. Un grupo de individuos apasionados y talentosos dedicados a la excelencia.
           </p>
         </div>
-        <Carousel
-          opts={{
-            align: "start",
-            loop: teamMembers.length > 2, // Enable loop only if there are enough items for it to make sense
-          }}
-          plugins={[autoplayPlugin.current]}
-          onMouseEnter={autoplayPlugin.current.stop}
-          onMouseLeave={autoplayPlugin.current.play}
-          className="w-full max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
+
+        {displayMode === 'carousel' ? (
+          <Carousel
+            opts={{
+              align: "start",
+              loop: teamMembers.length > 2, 
+            }}
+            plugins={[autoplayPlugin.current]}
+            onMouseEnter={autoplayPlugin.current.stop}
+            onMouseLeave={autoplayPlugin.current.play}
+            className="w-full max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {teamMembers.map((member) => (
+                <CarouselItem key={member.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 h-full">
+                    <TeamMemberCard member={member} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-[-20px] sm:left-[-40px] top-1/2 -translate-y-1/2 hidden sm:flex z-10" />
+            <CarouselNext className="absolute right-[-20px] sm:right-[-40px] top-1/2 -translate-y-1/2 hidden sm:flex z-10" />
+          </Carousel>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
             {teamMembers.map((member) => (
-              <CarouselItem key={member.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <TeamMemberCard member={member} />
-                </div>
-              </CarouselItem>
+              <TeamMemberCard key={member.id} member={member} />
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-[-20px] sm:left-[-40px] top-1/2 -translate-y-1/2 hidden sm:flex z-10" />
-          <CarouselNext className="absolute right-[-20px] sm:right-[-40px] top-1/2 -translate-y-1/2 hidden sm:flex z-10" />
-        </Carousel>
+          </div>
+        )}
       </div>
     </section>
   );

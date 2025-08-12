@@ -6,7 +6,7 @@ export const projects: PortfolioProject[] = [
   {
     id: "1",
     name: "Sitio Web Institucional - Winnetka",
-    imageUrl: "/images/pag_winnetka.png", // Usando imagen desde la carpeta /public/images
+    imageUrl: "/images/pag_winnetka.png",
     imageHint: "school website",
     client: "CEP Winnetka",
     technologies: ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS"],
@@ -27,13 +27,14 @@ export const projects: PortfolioProject[] = [
   },
   {
     id: "3",
-    name: "Aplicación de Banca Móvil Segura",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "mobile app finance",
-    client: "SecureBank Corp.",
-    technologies: ["React Native", "Firebase", "Redux", "Autenticación Biométrica"],
-    problemSolved: "Buscaban ofrecer a sus clientes una experiencia de banca móvil segura y amigable en iOS y Android, adaptada a sus crecientes necesidades.",
-    initialDescription: "Una aplicación de banca móvil segura y rica en funcionalidades para las necesidades financieras modernas.",
+    name: "Clínica Dental ArtDent - Sistema de Citas",
+    imageUrl: "/images/pag_artdent.png",
+    imageHint: "dental clinic website",
+    client: "Clínica ArtDent",
+    technologies: ["Next.js", "React", "AI Chatbot", "Firebase", "Calendly Integration"],
+    problemSolved: "La clínica dental requería un sistema digital para gestionar citas, presentar sus servicios y responder preguntas frecuentes a través de un asistente virtual, mejorando la experiencia del paciente y optimizando la administración.",
+    initialDescription: "Se desarrolló una plataforma web completa para la Clínica ArtDent. Incluye un sistema para reservar y consultar citas, una sección detallada de servicios y un chatbot con IA llamado 'Denty' para asistir a los usuarios.",
+    url: "https://art-dent-allin.vercel.app/",
   },
 ];
 

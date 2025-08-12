@@ -105,9 +105,7 @@ export default async function ProjectDetailPage({ params }: { params: { projectI
           <section>
             <h2 className="text-2xl sm:text-3xl font-semibold font-headline text-primary mb-4">Descripción Detallada del Proyecto</h2>
             <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed space-y-4">
-                {/* In a real app, this could be rich text/markdown */}
-              <p>{project.initialDescription || "No hay una descripción detallada disponible para este proyecto en este momento."}</p>
-              {/* Add more paragraphs or structured content if available */}
+              <p className="whitespace-pre-line">{project.initialDescription || "No hay una descripción detallada disponible para este proyecto en este momento."}</p>
             </div>
           </section>
         </article>

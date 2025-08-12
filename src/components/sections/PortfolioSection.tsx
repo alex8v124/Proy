@@ -12,11 +12,12 @@ export const projects: PortfolioProject[] = [
     technologies: ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS"],
     problemSolved: "El centro educativo necesitaba una presencia digital moderna para comunicar su propuesta de valor, historia y niveles educativos, además de facilitar un portal de preinscripción en línea para nuevos apoderados.",
     initialDescription: `Se desarrolló un sitio web institucional completo y un portal administrativo. El sitio público presenta la misión, visión, historia y oferta educativa del colegio, mientras que el portal facilita la gestión de preinscripciones, apoderados y docentes, unificando la comunicación y los procesos en una plataforma digital.
-    Credenciales de prueba:
-    Admin: admin@winnetka.edu.pe | admin123
-    Profesor: profesor.davis@winnetka.edu.pe | teacher123
-    Apoderado (antiguo): juan.perez@example.com | user123
-    Apoderado (nuevo): maria.gomez@example.com | parent123`,
+
+Credenciales de prueba:
+Admin: admin@winnetka.edu.pe | admin123
+Profesor: profesor.davis@winnetka.edu.pe | teacher123
+Apoderado (antiguo): juan.perez@example.com | user123
+Apoderado (nuevo): maria.gomez@example.com | parent123`,
     url: "https://sistema-web-winnetka.vercel.app/",
   },
   {
@@ -39,10 +40,11 @@ export const projects: PortfolioProject[] = [
     technologies: ["Next.js", "React", "AI Chatbot", "Calendly Integration"],
     problemSolved: "La clínica dental requería un sistema digital para gestionar citas, presentar sus servicios y responder preguntas frecuentes a través de un asistente virtual, mejorando la experiencia del paciente y optimizando la administración.",
     initialDescription: `Se desarrolló una plataforma web completa para la Clínica ArtDent. Incluye un sistema para reservar y consultar citas, una sección detallada de servicios y un chatbot con IA llamado 'Denty' para asistir a los usuarios.
-    Credenciales de prueba:
-    Admin: admin | password-admin
-    Secretaria: secretaria | password-secretaria
-    Paciente: paciente | password-paciente`,
+
+Credenciales de prueba:
+Admin: admin | password-admin
+Secretaria: secretaria | password-secretaria
+Paciente: paciente | password-paciente`,
     url: "https://art-dent-allin.vercel.app/",
   },
 ];

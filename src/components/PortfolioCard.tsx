@@ -71,7 +71,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           <h4 className="text-sm font-semibold mb-1 text-primary/80 dark:text-primary">Problema Resuelto:</h4>
           <p className="text-sm text-muted-foreground">{project.problemSolved}</p>
         </div>
-        <CardDescription className="text-sm leading-relaxed min-h-[60px]">
+        <CardDescription className="text-sm leading-relaxed min-h-[60px] whitespace-pre-line">
           {description}
         </CardDescription>
       </CardContent>

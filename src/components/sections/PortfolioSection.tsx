@@ -31,7 +31,7 @@ export const projects: PortfolioProject[] = [
     imageUrl: "/images/pag_artdent.png",
     imageHint: "dental clinic website",
     client: "Clínica ArtDent",
-    technologies: ["Next.js", "React", "AI Chatbot", "Firebase", "Calendly Integration"],
+    technologies: ["Next.js", "React", "AI Chatbot", "Calendly Integration"],
     problemSolved: "La clínica dental requería un sistema digital para gestionar citas, presentar sus servicios y responder preguntas frecuentes a través de un asistente virtual, mejorando la experiencia del paciente y optimizando la administración.",
     initialDescription: "Se desarrolló una plataforma web completa para la Clínica ArtDent. Incluye un sistema para reservar y consultar citas, una sección detallada de servicios y un chatbot con IA llamado 'Denty' para asistir a los usuarios.",
     url: "https://art-dent-allin.vercel.app/",

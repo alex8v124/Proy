@@ -48,6 +48,17 @@ Secretaria: secretaria | password-secretaria
 Paciente: paciente | password-paciente`,
     url: "https://art-dent-allin.vercel.app/",
   },
+  {
+    id: "4",
+    name: "Frontastic Commerce",
+    imageUrl: "/images/pag_ecommerce.png",
+    imageHint: "general ecommerce",
+    client: "Frontastic Commerce",
+    technologies: ["Next.js", "React", "E-commerce", "Vercel", "Tailwind CSS"],
+    problemSolved: "Crear una plataforma de e-commerce moderna para exhibir y vender una amplia variedad de productos en múltiples categorías, con funcionalidades de búsqueda y filtrado.",
+    initialDescription: "Un sitio de comercio electrónico completamente funcional con listados de productos, búsqueda, filtrado y carrito de compras. La plataforma está diseñada para ser escalable y proporcionar una experiencia de usuario fluida y atractiva.",
+    url: "https://ecommerce-six-tan-86.vercel.app/",
+  },
 ];
 
 export default function PortfolioSection() {

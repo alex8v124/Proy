@@ -2,6 +2,9 @@
 import type { PortfolioProject } from "@/types";
 import PortfolioCard from "@/components/PortfolioCard";
 import AnimatedTitle from "@/components/animations/AnimatedTitle";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export const projects: PortfolioProject[] = [
   {
@@ -61,7 +64,14 @@ Paciente: paciente | password-paciente`,
   },
 ];
 
-export default function PortfolioSection() {
+interface PortfolioSectionProps {
+  limit?: number;
+  showViewAllButton?: boolean;
+}
+
+export default function PortfolioSection({ limit, showViewAllButton = false }: PortfolioSectionProps) {
+  const displayedProjects = limit ? projects.slice(0, limit) : projects;
+
   return (
     <section id="portfolio" className="py-16 md:py-24 bg-card/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,10 +82,19 @@ export default function PortfolioSection() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {displayedProjects.map((project) => (
             <PortfolioCard key={project.id} project={project} />
           ))}
         </div>
+        {showViewAllButton && limit && projects.length > limit && (
+          <div className="text-center mt-12">
+            <Button asChild variant="outline" size="lg" className="hover:bg-primary/10 hover:text-primary hover:border-primary">
+              <Link href="/portafolio">
+                Ver Todos los Proyectos <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

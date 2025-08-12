@@ -17,7 +17,7 @@ export default function Home() {
         <HeroSection />
 
         <AnimatedSection>
-          <PortfolioSection />
+          <PortfolioSection limit={3} showViewAllButton={true} />
         </AnimatedSection>
         
         <Separator className="my-8 md:my-12 container max-w-5xl mx-auto" />

@@ -15,7 +15,8 @@ export const projects: PortfolioProject[] = [
     client: "CEP Winnetka",
     technologies: ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS"],
     problemSolved: "El centro educativo necesitaba una presencia digital moderna para comunicar su propuesta de valor, historia y niveles educativos, además de facilitar un portal de preinscripción en línea para nuevos apoderados.",
-    initialDescription: `Para el CEP Winnetka, se desarrolló una solución digital integral que abarca un sitio web institucional y un portal administrativo multifuncional. El sitio público fue diseñado para ser la cara digital del colegio, presentando de manera clara y atractiva su misión, visión, historia y la oferta educativa en todos sus niveles.
+    shortDescription: "Plataforma web integral con portal administrativo para gestionar preinscripciones, docentes y alumnos, optimizando la operativa del centro educativo.",
+    detailedDescription: `Para el CEP Winnetka, se desarrolló una solución digital integral que abarca un sitio web institucional y un portal administrativo multifuncional. El sitio público fue diseñado para ser la cara digital del colegio, presentando de manera clara y atractiva su misión, visión, historia y la oferta educativa en todos sus niveles.
 
 El núcleo de la solución es el portal administrativo, una herramienta potente que centraliza la gestión de preinscripciones, simplificando el proceso para los nuevos apoderados, y permite una administración eficiente de los datos de docentes y alumnos. Esta plataforma unifica la comunicación y los procesos internos, optimizando la operativa diaria del centro educativo y mejorando la interacción entre la comunidad escolar.
 
@@ -34,7 +35,8 @@ Apoderado (nuevo): maria.gomez@example.com | parent123`,
     client: "The Roost",
     technologies: ["Next.js", "React", "AI", "Vercel", "E-commerce"],
     problemSolved: "Crear una plataforma de e-commerce para una marca de café artesanal, conectando a los amantes del café con productores locales y ofreciendo una experiencia de compra única con un recomendador de productos basado en IA.",
-    initialDescription: `Creamos una tienda en línea completa para 'The Roost', una marca de café artesanal con una fuerte identidad. La plataforma cuenta con un catálogo de productos detallado, un carrito de compras funcional y una sección 'Sobre nosotros' para conectar con la historia de la marca.
+    shortDescription: "Tienda en línea para café artesanal con un recomendador de mezclas basado en IA que personaliza la experiencia de compra y fomenta la lealtad a la marca.",
+    detailedDescription: `Creamos una tienda en línea completa para 'The Roost', una marca de café artesanal con una fuerte identidad. La plataforma cuenta con un catálogo de productos detallado, un carrito de compras funcional y una sección 'Sobre nosotros' para conectar con la historia de la marca.
 
 El elemento más innovador es su recomendador de mezclas de café, que utiliza inteligencia artificial para analizar las preferencias del usuario (notas de sabor, origen, tipo de tueste) y sugerir productos personalizados. Esta funcionalidad no solo mejora la experiencia de compra, sino que también educa al cliente y fomenta la exploración de nuevos sabores, aumentando la interacción y la lealtad a la marca.`,
     url: "https://theroost.vercel.app/",
@@ -47,7 +49,8 @@ El elemento más innovador es su recomendador de mezclas de café, que utiliza i
     client: "Clínica ArtDent",
     technologies: ["Next.js", "React", "AI Chatbot", "Calendly Integration"],
     problemSolved: "La clínica dental requería un sistema digital para gestionar citas, presentar sus servicios y responder preguntas frecuentes a través de un asistente virtual, mejorando la experiencia del paciente y optimizando la administración.",
-    initialDescription: `Se desarrolló una plataforma web integral para la Clínica ArtDent, enfocada en mejorar la experiencia del paciente y la eficiencia administrativa. La solución incluye un sistema intuitivo para reservar y consultar citas, integrado con herramientas de calendario para una gestión sin fisuras.
+    shortDescription: "Plataforma web con sistema de citas y un chatbot con IA, 'Denty', para asistencia 24/7, mejorando la eficiencia y el servicio al cliente.",
+    detailedDescription: `Se desarrolló una plataforma web integral para la Clínica ArtDent, enfocada en mejorar la experiencia del paciente y la eficiencia administrativa. La solución incluye un sistema intuitivo para reservar y consultar citas, integrado con herramientas de calendario para una gestión sin fisuras.
 
 Un componente clave es 'Denty', un chatbot con inteligencia artificial diseñado para asistir a los usuarios 24/7. Denty puede responder preguntas frecuentes sobre servicios, horarios y preparaciones para tratamientos, además de guiar a los usuarios en el proceso de reserva de citas. Esto no solo libera tiempo del personal administrativo, sino que también proporciona un servicio al cliente inmediato y accesible.
 
@@ -65,7 +68,8 @@ Paciente: paciente | password-paciente`,
     client: "Frontastic Commerce",
     technologies: ["Next.js", "React", "E-commerce", "Vercel", "Tailwind CSS"],
     problemSolved: "Crear una plataforma de e-commerce moderna para exhibir y vender una amplia variedad de productos en múltiples categorías, con funcionalidades de búsqueda y filtrado.",
-    initialDescription: "Desarrollamos un sitio de comercio electrónico completamente funcional y escalable, diseñado para proporcionar una experiencia de usuario fluida y atractiva. La plataforma cuenta con un listado dinámico de productos, un sistema de búsqueda avanzada y opciones de filtrado por categoría y otros atributos, permitiendo a los clientes encontrar exactamente lo que buscan con facilidad. La arquitectura está optimizada para ser escalable, soportando un catálogo creciente de productos y un alto volumen de tráfico.",
+    shortDescription: "E-commerce escalable con búsqueda avanzada y filtrado de productos para una experiencia de usuario fluida y eficiente, soportando un catálogo amplio.",
+    detailedDescription: "Desarrollamos un sitio de comercio electrónico completamente funcional y escalable, diseñado para proporcionar una experiencia de usuario fluida y atractiva. La plataforma cuenta con un listado dinámico de productos, un sistema de búsqueda avanzada y opciones de filtrado por categoría y otros atributos, permitiendo a los clientes encontrar exactamente lo que buscan con facilidad. La arquitectura está optimizada para ser escalable, soportando un catálogo creciente de productos y un alto volumen de tráfico.",
     url: "https://ecommerce-six-tan-86.vercel.app/",
   },
 ];

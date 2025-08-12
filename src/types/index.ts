@@ -5,12 +5,13 @@ import { z } from "zod";
 export interface PortfolioProject {
   id: string;
   name: string;
-  imageUrl: string; // Simplificado a string para usar rutas de /public o URLs externas
+  imageUrl: string;
   imageHint?: string;
   client?: string;
   technologies: string[];
   problemSolved: string;
-  initialDescription?: string;
+  shortDescription?: string; // Descripción corta para la tarjeta
+  detailedDescription?: string; // Descripción larga para la página de detalles
   url?: string;
 }
 

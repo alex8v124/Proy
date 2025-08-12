@@ -17,7 +17,7 @@ interface PortfolioCardProps {
 }
 
 export default function PortfolioCard({ project }: PortfolioCardProps) {
-  const [description, setDescription] = useState(project.initialDescription || "¡Haz clic en 'Generar Descripción' para ver ideas potenciadas por IA!");
+  const [description, setDescription] = useState(project.shortDescription || "¡Haz clic en 'Generar Descripción' para ver ideas potenciadas por IA!");
   const [isGenerating, startTransition] = useTransition();
   const { toast } = useToast();
 

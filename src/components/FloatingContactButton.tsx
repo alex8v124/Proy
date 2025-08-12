@@ -45,7 +45,7 @@ export default function FloatingContactButton() {
             <div className="flex flex-col sm:flex-row justify-center gap-3">
               <Button variant="outline" asChild className="w-full sm:w-auto hover:bg-green-500/10 hover:text-green-600 hover:border-green-500/50">
                 <a 
-                  href="https://wa.me/NUMERO_DE_WHATSAPP" 
+                  href="https://wa.me/51939962161" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="Contactar por WhatsApp"
@@ -55,7 +55,7 @@ export default function FloatingContactButton() {
               </Button>
               <Button variant="outline" asChild className="w-full sm:w-auto hover:bg-sky-600/10 hover:text-sky-700 hover:border-sky-600/50">
                 <a 
-                  href="https://linkedin.com/company/TU_EMPRESA"
+                  href="https://www.linkedin.com/in/omer-runco-b7a261310/"
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="Visitar perfil de LinkedIn"

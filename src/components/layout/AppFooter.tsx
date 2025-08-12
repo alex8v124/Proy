@@ -14,7 +14,7 @@ export default function AppFooter() {
           <h3 className="text-md font-semibold text-foreground mb-4">Conéctate con Nosotros</h3>
           <div className="flex justify-center items-center gap-6">
             <a 
-              href="https://wa.me/NUMERO_DE_WHATSAPP" // Reemplazar con el número real
+              href="https://wa.me/51939962161"
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="Contactar por WhatsApp"
@@ -23,7 +23,7 @@ export default function AppFooter() {
               <MessageCircle size={28} strokeWidth={1.5} />
             </a>
             <a 
-              href="https://linkedin.com/company/TU_EMPRESA" // Reemplazar con el enlace real
+              href="https://www.linkedin.com/in/omer-runco-b7a261310/"
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="Visitar perfil de LinkedIn"
@@ -36,9 +36,7 @@ export default function AppFooter() {
         </div>
 
         <p className="text-sm">&copy; {currentYear} All-in Dev Solutions S.R.L. Todos los derechos reservados.</p>
-        <p className="text-xs mt-2 text-muted-foreground/70">
-          Recuerda reemplazar "NUMERO_DE_WHATSAPP" y "TU_EMPRESA" con tus datos reales en los enlaces.
-        </p>
+        
       </div>
     </footer>
   );

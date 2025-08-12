@@ -1,3 +1,4 @@
+
 "use server";
 
 import type { z } from "zod";
@@ -34,6 +35,9 @@ export async function submitContactForm(
   }
 
   console.log("Formulario de contacto enviado:", parsed.data);
+  console.log("Destinatario del correo:", "alex.04.antay@gmail.com");
+
+  // Simulación de envío
   await new Promise(resolve => setTimeout(resolve, 1000)); 
 
   return {

@@ -23,10 +23,10 @@ export default function AppHeader() {
       <div className="container mx-auto flex items-center justify-between relative z-10 py-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3 group">
           <Image
-            src="/images/all_in_dev_sol.png"
+            src="/images/all_in_dev_sol2.png"
             alt="All-in Dev Solutions Logo"
-            width={40}
-            height={40}
+            width={48}
+            height={48}
             className="rounded-md object-contain group-hover:ring-2 group-hover:ring-accent transition-all duration-300"
           />
           <h1 className="text-2xl font-bold font-headline text-white group-hover:text-accent transition-colors duration-300">

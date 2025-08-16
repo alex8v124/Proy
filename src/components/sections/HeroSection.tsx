@@ -22,10 +22,10 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
         <div className="inline-block p-3 mb-6 bg-accent/20 rounded-full shadow-lg border border-accent/50">
            <Image
-            src="/images/all_in_dev_sol.png"
+            src="/images/all_in_dev_sol2.png"
             alt="All-in Dev Solutions Logo"
-            width={48}
-            height={48}
+            width={64}
+            height={64}
             className="rounded-md object-contain"
           />
         </div>

@@ -25,10 +25,10 @@ export default function MobileMenu() {
           <div className="p-4 border-b border-border/20">
             <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 group">
               <Image 
-                src="/images/all_in_dev_sol.png" 
+                src="/images/all_in_dev_sol2.png" 
                 alt="All-in Dev Solutions Logo" 
-                width={32} 
-                height={32}
+                width={36} 
+                height={36}
                 className="rounded-md"
               />
               <span className="text-xl font-bold font-headline text-foreground">

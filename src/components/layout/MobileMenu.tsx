@@ -25,7 +25,7 @@ export default function MobileMenu() {
           <div className="p-4 border-b border-border/20">
             <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 group">
               <Image 
-                src="/images/all_in_dev_sol.jpg" 
+                src="/images/all_in_dev_sol.png" 
                 alt="All-in Dev Solutions Logo" 
                 width={32} 
                 height={32}

@@ -23,7 +23,7 @@ export default function AppHeader() {
       <div className="container mx-auto flex items-center justify-between relative z-10 py-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3 group">
           <Image
-            src="/images/all_in_dev_sol.jpg"
+            src="/images/all_in_dev_sol.png"
             alt="All-in Dev Solutions Logo"
             width={40}
             height={40}

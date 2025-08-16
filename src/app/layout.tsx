@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'All-in Dev Solutions S.R.L.',
   description: 'Soluciones tecnológicas y desarrollo de software a medida para impulsar empresas medianas. Aplicaciones web, de escritorio y consultoría experta.',
   icons: {
-    icon: '/images/all_in_dev_sol2.png',
+    icon: '/images/all_in_dev_sol.jpg',
   },
 };
 

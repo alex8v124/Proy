@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
@@ -6,6 +7,9 @@ import FloatingContactButton from '@/components/FloatingContactButton'; // Nueva
 export const metadata: Metadata = {
   title: 'All-in Dev Solutions S.R.L. - Desarrollo de Software Innovador',
   description: 'Soluciones tecnológicas y desarrollo de software a medida para impulsar empresas medianas. Aplicaciones web, de escritorio y consultoría experta.',
+  icons: {
+    icon: '/all_in_dev_sol.jpg',
+  },
 };
 
 export default function RootLayout({

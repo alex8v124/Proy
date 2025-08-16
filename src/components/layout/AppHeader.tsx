@@ -1,7 +1,7 @@
-import { CodeXml } from 'lucide-react';
+
 import Link from 'next/link';
 import Image from 'next/image';
-import MobileMenu from './MobileMenu'; // Nueva importación
+import MobileMenu from './MobileMenu'; 
 
 export default function AppHeader() {
   return (
@@ -21,8 +21,14 @@ export default function AppHeader() {
 
       {/* Header Content */}
       <div className="container mx-auto flex items-center justify-between relative z-10 py-4 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 group">
-          <CodeXml className="h-9 w-9 text-primary group-hover:text-accent transition-colors duration-300" />
+        <Link href="/" className="flex items-center gap-3 group">
+          <Image
+            src="/all_in_dev_sol.jpg"
+            alt="All-in Dev Solutions Logo"
+            width={40}
+            height={40}
+            className="rounded-md object-contain group-hover:ring-2 group-hover:ring-accent transition-all duration-300"
+          />
           <h1 className="text-2xl font-bold font-headline text-white group-hover:text-accent transition-colors duration-300">
             All-in Dev Solutions
           </h1>

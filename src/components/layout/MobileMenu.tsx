@@ -4,9 +4,10 @@
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, CodeXml } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
+import Image from "next/image";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,8 +23,14 @@ export default function MobileMenu() {
       <SheetContent side="left" className="w-[300px] sm:w-[350px] bg-card/95 backdrop-blur-sm border-border/30">
         <div className="flex flex-col h-full">
           <div className="p-4 border-b border-border/20">
-            <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 group">
-              <CodeXml className="h-8 w-8 text-primary" />
+            <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 group">
+              <Image 
+                src="/all_in_dev_sol.jpg" 
+                alt="All-in Dev Solutions Logo" 
+                width={32} 
+                height={32}
+                className="rounded-md"
+              />
               <span className="text-xl font-bold font-headline text-foreground">
                 All-in Dev Solutions
               </span>

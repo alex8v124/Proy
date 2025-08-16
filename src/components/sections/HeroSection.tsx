@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown, CodeXml } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -21,7 +21,13 @@ export default function HeroSection() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
         <div className="inline-block p-3 mb-6 bg-accent/20 rounded-full shadow-lg border border-accent/50">
-          <CodeXml className="h-10 w-10 sm:h-12 sm:w-12 text-accent" />
+           <Image
+            src="/all_in_dev_sol.jpg"
+            alt="All-in Dev Solutions Logo"
+            width={48}
+            height={48}
+            className="rounded-md object-contain"
+          />
         </div>
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-headline tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-text-gradient">
           Soluciones que se adaptan a ti, tecnología que transforma.

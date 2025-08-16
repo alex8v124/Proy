@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
         <div className="inline-block p-3 mb-6 bg-accent/20 rounded-full shadow-lg border border-accent/50">
            <Image
-            src="/all_in_dev_sol.jpg"
+            src="/images/all_in_dev_sol.jpg"
             alt="All-in Dev Solutions Logo"
             width={48}
             height={48}
